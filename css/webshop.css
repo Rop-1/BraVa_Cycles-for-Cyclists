@@ -1,15 +1,20 @@
+/* ============================================================
+   WEBSHOP (webshop.html) - terméklista oldal stílusok
+   ============================================================ */
+
+/* ---------- Termékkártya ---------- */
 .product-card-shop {
-    background-color: var(--bg-primary);
-    border-radius: 9px;
-    cursor: pointer;
     height: 100%;
     display: flex;
     flex-direction: column;
+    border-radius: 9px;
+    background-color: var(--bg-primary);
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 .product-card-shop:hover {
     transform: translateY(-5px);
-    box-shadow: 22px 19px 40px 8px var(--shadow-color);
+    box-shadow: var(--shadow-lg);
 }
 .product-card-shop img {
     width: 100%;
@@ -18,55 +23,50 @@
     border-radius: 9px 9px 0 0;
 }
 .product-card-shop .card-body {
-    padding: 1.5rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    padding: 1.5rem;
 }
-.product-card-shop .price {
-    margin-top: auto;
-}
+.product-card-shop .price { margin-top: auto; }
+
+/* ---------- Promo kártya ---------- */
 .promo-card {
-    border-radius: 9px;
+    display: flex;
     height: 100%;
     min-height: 400px;
-    display: flex;
-    cursor: pointer;
+    border-radius: 9px;
     overflow: hidden;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
     transition: all 0.3s ease;
-    box-shadow: 22px 19px 40px 8px var(--shadow-color);
 }
-.promo-card:hover {
-    transform: translateY(-5px);
-}
-.promo-card img  { border-radius: 9px; }
-.promo-card h3   { color: #fff; }
-.promo-card p    { color: rgba(255, 255, 255, 0.9); }
-.badge-stock,.badge-out-of-stock {
+.promo-card:hover { transform: translateY(-5px); }
+.promo-card img { border-radius: 9px; }
+.promo-card h3 { color: #fff; }
+.promo-card p { color: rgba(255,255,255,0.9); }
+
+/* ---------- Készlet jelvények ---------- */
+.badge-stock,
+.badge-out-of-stock {
     padding: 0.4rem 0.8rem;
     border-radius: 5px;
     font-size: 0.85rem;
     color: #fff;
 }
-.badge-stock        { background-color: #28a745; }
-.badge-out-of-stock { background-color: #dc3545; }
+.badge-stock { background-color: var(--success); }
+.badge-out-of-stock { background-color: var(--error); }
+
+/* ---------- Aktív szűrő jelvény ---------- */
 .filter-badge {
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
 }
-
-.filter-badge i {
-    cursor: pointer;
-    transition: color 0.2s ease;
-}
-
-.filter-badge i:hover {
-    color: var(--accent-color);
-}
+.filter-badge i { cursor: pointer; transition: color 0.2s ease; }
+.filter-badge i:hover { color: var(--accent-color); }

@@ -1,0 +1,177 @@
+/* ============================================================
+   KERÉKPÁR VÁLASZTÓ (kerekpar-valaszto.html)
+   A step-bar a style.css-ben van (közös a checkouttal)
+   ============================================================ */
+
+.wizard-wrapper { min-height: 100vh; background-color: var(--bg-primary); }
+
+.wizard-header { position: sticky; top: 0; z-index: 1000; padding: 1rem 1.5rem; }
+.wizard-header .nav-inner {
+    background-color: var(--bg-primary);
+    box-shadow: var(--shadow-lg);
+    border-radius: 12px;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.3s ease;
+}
+.wizard-logo img { height: 36px; width: auto; }
+
+/* ---------- Wizard panel ---------- */
+.wizard-panel {
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 9px;
+    background-color: var(--bg-primary);
+    box-shadow: var(--shadow-lg);
+    transition: background-color 0.3s ease;
+}
+.wizard-step-content { display: none; flex: 1; }
+.wizard-step-content.aktiv { display: flex; flex-direction: column; }
+
+/* ---------- Opció rács / kártya ---------- */
+.option-grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+}
+.option-card {
+    padding: 1.25rem 1rem;
+    text-align: center;
+    border: 2px solid var(--border-color);
+    border-radius: 9px;
+    background-color: var(--bg-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.option-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px var(--shadow-color);
+}
+.option-card.selected {
+    border-color: var(--accent-color);
+    background-color: rgba(255,117,31,0.06);
+}
+.option-card i {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+.option-card.selected i,
+.option-card:hover i { color: var(--accent-color); }
+.option-card .option-label { font-weight: 600; }
+.option-card .option-sub { color: var(--text-secondary); }
+
+/* ---------- Csúszka ---------- */
+.range-track {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(to right, var(--accent-color) 0%, var(--accent-color) 50%, var(--border-color) 50%);
+    cursor: pointer;
+    outline: none;
+}
+.range-track::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    box-shadow: 0 2px 8px rgba(255,117,31,0.4);
+    cursor: pointer;
+}
+.range-track::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border: none;
+    border-radius: 50%;
+    background: var(--accent-color);
+    cursor: pointer;
+}
+
+/* ---------- Wizard navigációs gombok ---------- */
+.wizard-nav-btn {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--accent-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.wizard-nav-btn:hover { background-color: var(--accent-hover); }
+.wizard-nav-btn:disabled { background-color: var(--border-color); cursor: not-allowed; }
+
+.wizard-back-btn {
+    padding: 0.75rem 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.wizard-back-btn:hover { border-color: var(--accent-color); color: var(--accent-color); }
+
+/* ---------- Találati kártya ---------- */
+.result-card {
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+    border-radius: 9px;
+    background-color: var(--bg-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.result-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-lg);
+}
+.result-card img {
+    width: 100%;
+    height: 200px;
+    padding: 1rem;
+    object-fit: contain;
+    background-color: var(--bg-secondary);
+}
+.result-card .result-body { padding: 1rem; }
+.result-rank {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-weight: 700;
+}
+
+/* ---------- Progress pöttyök ---------- */
+.progress-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 1rem;
+}
+.progress-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--border-color);
+    transition: background-color 0.3s ease;
+}
+.progress-dot.aktiv { background-color: var(--accent-color); }
+.progress-dot.done { background-color: var(--accent-color); opacity: 0.4; }
+
+@media (max-width: 767.98px) {
+    .option-grid { grid-template-columns: repeat(2, 1fr); }
+    .k-val-h { text-align: center; }
+    .wizard-panel { padding: 1.25rem; }
+}

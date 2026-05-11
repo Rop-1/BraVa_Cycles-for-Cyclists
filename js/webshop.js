@@ -6,17 +6,12 @@ var activeFilters = {
     maxPrice: null,
     inStock: false
 }
+
 $(document).ready(function() {
     renderProducts()
     setupScrollToTop()
 })
-function formatPrice(price) {
-    return new Intl.NumberFormat('hu-HU', {
-        style: 'currency',
-        currency: 'HUF',
-        minimumFractionDigits: 0
-    }).format(price)
-}
+
 function renderProducts() {
     var $grid = $('#productGrid')
     $grid.empty()
@@ -31,6 +26,7 @@ function renderProducts() {
         $grid.append(createProductCard(product))
     })
 }
+
 function createProductCard(product) {
     var stockBadge = product.stock
         ? '<span class="badge badge-stock"><i class="bi bi-check-circle me-1"></i>Raktáron</span>'
@@ -44,15 +40,26 @@ function createProductCard(product) {
                 $(stockBadge),
                 $('<div class="price d-flex justify-content-between align-items-center mt-3">').append(
                     $('<span class="nari fw-bold fs-5">').text(formatPrice(product.price)),
-                    $('<button class="btn i-web rounded-circle">').on('click', function(e) {
-                        e.stopPropagation()
-                        goToProduct(product.id)
-                    }).append($('<i class="bi bi-arrow-right">'))
+                    $('<div class="d-flex gap-2">').append(
+                        $('<button class="btn i-web rounded-circle" title="Kosárba">').on('click', function(e) {
+                            e.stopPropagation()
+                            if (!product.stock) {
+                                showCartToast(product.name, false)
+                                return
+                            }
+                            addToCart(product)
+                        }).append($('<i class="bi bi-cart-plus">')),
+                        $('<button class="btn i-web rounded-circle" title="Részletek">').on('click', function(e) {
+                            e.stopPropagation()
+                            goToProduct(product.id)
+                        }).append($('<i class="bi bi-arrow-right">'))
+                    )
                 )
             )
         )
     )
 }
+
 function createPromoCard(promo) {
     return $('<div class="col-lg-4 col-md-6">').append(
         $('<div class="promo-card">').on('click', function() { window.location.href = promo.link }).append(
@@ -60,6 +67,7 @@ function createPromoCard(promo) {
         )
     )
 }
+
 function applyFilters() {
     activeFilters.categories = []
     activeFilters.brands = []
@@ -69,21 +77,17 @@ function applyFilters() {
     $('.form-check-input[id^="cat"]:checked').each(function() { activeFilters.categories.push($(this).val()) })
     $('.form-check-input[id^="brand"]:checked').each(function() { activeFilters.brands.push($(this).val()) })
     filteredProducts = products.filter(function(p) {
-        if (activeFilters.categories.length && !activeFilters.categories.includes(p.category)) 
-            return false
-        if (activeFilters.brands.length && !activeFilters.brands.includes(p.brand)) 
-            return false
-        if (activeFilters.minPrice && p.price < activeFilters.minPrice) 
-            return false
-        if (activeFilters.maxPrice && p.price > activeFilters.maxPrice) 
-            return false
-        if (activeFilters.inStock && !p.stock) 
-            return false
+        if (activeFilters.categories.length && !activeFilters.categories.includes(p.category)) return false
+        if (activeFilters.brands.length && !activeFilters.brands.includes(p.brand)) return false
+        if (activeFilters.minPrice && p.price < activeFilters.minPrice) return false
+        if (activeFilters.maxPrice && p.price > activeFilters.maxPrice) return false
+        if (activeFilters.inStock && !p.stock) return false
         return true
     })
     renderProducts()
     showActiveFilters()
 }
+
 function clearFilters() {
     $('.form-check-input').prop('checked', false)
     $('#minPrice, #maxPrice').val('')
@@ -92,6 +96,7 @@ function clearFilters() {
     renderProducts()
     $('#activeFilters').empty()
 }
+
 function showActiveFilters() {
     var $container = $('#activeFilters')
     $container.empty()
@@ -115,7 +120,7 @@ function showActiveFilters() {
     if (activeFilters.minPrice || activeFilters.maxPrice) {
         hasFilters = true
         $container.append(
-            $('<span class="filter-badge">').text((activeFilters.minPrice || 0) + ' - ' + (activeFilters.maxPrice || '∞') + ' Ft').append(
+            $('<span class="filter-badge">').text(`${activeFilters.minPrice || 0} - ${activeFilters.maxPrice || '∞'} Ft`).append(
                 $('<i class="bi bi-x">').on('click', function() { removeFilter('price') })
             )
         )
@@ -134,13 +139,14 @@ function showActiveFilters() {
         )
     }
 }
+
 function removeFilter(type, value) {
     if (type === 'category') {
         activeFilters.categories.splice(activeFilters.categories.indexOf(value), 1)
-        $('input[value="' + value + '"][id^="cat"]').prop('checked', false)
+        $(`input[value="${value}"][id^="cat"]`).prop('checked', false)
     } else if (type === 'brand') {
         activeFilters.brands.splice(activeFilters.brands.indexOf(value), 1)
-        $('input[value="' + value + '"][id^="brand"]').prop('checked', false)
+        $(`input[value="${value}"][id^="brand"]`).prop('checked', false)
     } else if (type === 'price') {
         activeFilters.minPrice = null
         activeFilters.maxPrice = null
