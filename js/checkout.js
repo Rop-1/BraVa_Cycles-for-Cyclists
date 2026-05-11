@@ -1,24 +1,22 @@
-var cart = JSON.parse(localStorage.getItem('brava_cart') || '[]')
 var promoApplied = false
 var promoDiscount = 0
 
-function saveCart() {
-    localStorage.setItem('brava_cart', JSON.stringify(cart))
-}
-
 function updateQty(index, delta) {
+    var cart = getCart()
     cart[index].qty = Math.max(1, (cart[index].qty || 1) + delta)
-    saveCart()
+    saveCart(cart)
     renderCart()
 }
 
 function removeItem(index) {
+    var cart = getCart()
     cart.splice(index, 1)
-    saveCart()
+    saveCart(cart)
     renderCart()
 }
 
 function renderCart() {
+    var cart = getCart()
     var $items = $('#cartItems')
     var $btn = $('#checkoutBtn')
 
@@ -74,16 +72,17 @@ function renderCart() {
 }
 
 function applyPromo() {
+    var cart = getCart()
     var code = $('#promoInput').val().trim().toUpperCase()
     var $msg = $('#promoMsg')
     if (code === 'BRAVA10') {
         var subtotal = cart.reduce(function(s, item) { return s + item.price * (item.qty || 1) }, 0)
         promoDiscount = Math.round(subtotal * 0.1)
         promoApplied = true
-        $msg.css('color', '#28a745').text('Kupon alkalmazva: 10% kedvezmény!')
+        $msg.css('color', 'var(--success)').text('Kupon alkalmazva: 10% kedvezmény!')
         renderCart()
     } else {
-        $msg.css('color', '#dc3545').text('Érvénytelen kuponkód.')
+        $msg.css('color', 'var(--error)').text('Érvénytelen kuponkód.')
     }
 }
 

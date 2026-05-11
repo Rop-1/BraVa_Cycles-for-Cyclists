@@ -1,0 +1,13 @@
+/* ============================================================
+   SHOPS (shops.html) - üzletek + kapcsolat oldal stílusok
+   ============================================================ */
+
+/* Google Maps iframe alapértelmezett méret */
+.shops-map { width: 100%; max-width: 1300px; height: 600px; border: 0; }
+
+/* Kapcsolat űrlap panel */
+.kapcsolat {
+    background-color: var(--bg-primary);
+    box-shadow: var(--shadow-lg);
+    transition: background-color 0.3s ease;
+}
