@@ -1,0 +1,89 @@
+.product-gallery .main-image {
+    cursor: zoom-in;
+    overflow: hidden;
+    border-radius: 9px;
+}
+.product-gallery .main-image img {
+    transition: transform 0.3s ease;
+}
+.product-gallery .main-image:hover img {
+    transform: scale(1.05);
+}
+.thumbnail-container {
+    overflow-x: auto;
+}
+.thumbnail-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+.thumbnail-container img:hover,
+.thumbnail-container img.active {
+    opacity: 1;
+    border-color: var(--accent-color);
+}
+.product-features {
+    background-color: var(--bg-secondary);
+}
+.lightbox-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lightbox-container img {
+    max-height: 80vh;
+    object-fit: contain;
+}
+.lightbox-btn {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+.lightbox-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.lightbox-btn i    { font-size: 15px; }
+.lightbox-btn.prev { left: 20px; }
+.lightbox-btn.next { right: 20px; }
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+}
+.breadcrumb-item a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+.breadcrumb-item a:hover {
+    color: var(--accent-color);
+}
+
+.breadcrumb-item.active {
+    color: var(--text-secondary);
+}
+.nav-tabs .nav-link {
+    color: var(--text-primary);
+    border: none;
+}
+.nav-tabs .nav-link.active {
+    color: var(--accent-color);
+    background-color: transparent;
+}
+.table {
+    color: var(--text-primary);
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--bg-secondary);
+}
