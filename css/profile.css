@@ -1,0 +1,351 @@
+/* ============================================================
+   PROFILE (profile.html) - "Garázs" profil oldal stílusok
+   A meglévő design nyelvezetét követi (shadow-lg, accent-color,
+   bg-primary kártyák, rounded-3)
+   ============================================================ */
+
+/* ---------- Hero / Üdvözlő kártya ---------- */
+.profile-hero {
+    padding: 2rem;
+    border-radius: 12px;
+    background-color: var(--bg-primary);
+    box-shadow: var(--shadow-lg);
+    transition: background-color 0.3s ease;
+}
+.profile-avatar {
+    width: 84px;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+    color: #fff;
+    font-size: 2.25rem;
+    flex-shrink: 0;
+}
+.profile-stat {
+    flex: 1;
+    min-width: 130px;
+    padding: 0.75rem 1rem;
+    border-radius: 9px;
+    background-color: var(--bg-secondary);
+    transition: background-color 0.3s ease;
+}
+.profile-stat .stat-val { color: var(--accent-color); font-size: 1.5rem; font-weight: 700; line-height: 1; }
+.profile-stat .stat-lbl { color: var(--text-secondary); font-size: 0.8rem; }
+
+/* ---------- Tab navigáció (nav-pills override) ---------- */
+.profile-tabs {
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 12px;
+    background-color: var(--bg-primary);
+    box-shadow: var(--shadow-lg);
+    overflow-x: auto;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+}
+.profile-tabs::-webkit-scrollbar { display: none; }
+.profile-tabs .nav-link {
+    color: var(--text-primary);
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    white-space: nowrap;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+.profile-tabs .nav-link:hover { background-color: var(--bg-secondary); color: var(--accent-color); }
+.profile-tabs .nav-link.active {
+    background-color: var(--accent-color);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(255,117,31,0.25);
+}
+
+/* ---------- Tartalom kártya (közös panel) ---------- */
+.profile-panel {
+    padding: 1.75rem;
+    border-radius: 12px;
+    background-color: var(--bg-primary);
+    box-shadow: var(--shadow-lg);
+    transition: background-color 0.3s ease;
+}
+.profile-panel-title {
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 700;
+}
+
+/* ---------- Garázs - bicikli kártyák ---------- */
+.garage-card {
+    height: 100%;
+    overflow: hidden;
+    border-radius: 9px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+    transition: all 0.3s ease;
+}
+.garage-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-lg);
+}
+.garage-card .garage-img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    padding: 0.75rem;
+    background-color: var(--bg-secondary);
+}
+.garage-card .garage-body { padding: 1rem; }
+.garage-card .garage-brand { color: var(--text-secondary); font-size: 0.8rem; }
+.garage-card .garage-name { font-weight: 700; }
+
+/* ---------- Rendelések - lista ---------- */
+.order-item {
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 9px;
+    background-color: var(--bg-primary);
+    transition: all 0.2s ease;
+}
+.order-item + .order-item { margin-top: 0.75rem; }
+.order-item:hover { border-color: var(--accent-color); }
+.order-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+.order-status.delivered { background: rgba(40,167,69,0.12); color: var(--success); }
+.order-status.shipping { background: rgba(255,117,31,0.12); color: var(--accent-color); }
+.order-status.processing { background: rgba(108,117,125,0.12); color: var(--text-secondary); }
+
+/* ---------- Edzésnapló - űrlap és tábla ---------- */
+.ride-form {
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+    border-radius: 9px;
+    background-color: var(--bg-secondary);
+}
+.ride-form label { color: var(--text-secondary); font-size: 0.8rem; font-weight: 600; }
+.ride-form input { border-radius: 8px; }
+.ride-table { width: 100%; }
+.ride-table th {
+    padding: 0.6rem 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--border-color);
+}
+.ride-table td {
+    padding: 0.85rem 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+.ride-table tr:last-child td { border-bottom: none; }
+.ride-table .ride-speed { color: var(--accent-color); font-weight: 700; }
+.ride-empty {
+    padding: 2.5rem 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
+.ride-empty i { font-size: 2.5rem; color: var(--border-color); margin-bottom: 0.75rem; }
+.ride-del-btn {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: none;
+}
+.ride-del-btn:hover { background: rgba(220,53,69,0.1); color: var(--error); }
+
+/* ---------- Statisztika ---------- */
+.stat-tile {
+    padding: 1.25rem;
+    border-radius: 9px;
+    background-color: var(--bg-secondary);
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+.stat-tile i { font-size: 1.75rem; color: var(--accent-color); margin-bottom: 0.5rem; }
+.stat-tile .tile-val { font-size: 1.75rem; font-weight: 700; line-height: 1.1; }
+.stat-tile .tile-lbl { color: var(--text-secondary); font-size: 0.85rem; }
+
+.chart-wrap {
+    padding: 1.25rem;
+    border-radius: 9px;
+    background-color: var(--bg-secondary);
+}
+.chart-bars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 200px;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+.chart-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    gap: 0.4rem;
+}
+.chart-bar {
+    width: 100%;
+    min-height: 6px;
+    background: linear-gradient(180deg, var(--accent-color), var(--accent-hover));
+    border-radius: 6px 6px 0 0;
+    transition: height 0.5s ease;
+    position: relative;
+}
+.chart-bar .bar-val {
+    position: absolute;
+    top: -1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+.chart-label { font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; }
+
+/* ---------- FAQ akkordion override ---------- */
+.faq-accordion .accordion-item {
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 9px !important;
+    overflow: hidden;
+    background-color: var(--bg-primary);
+}
+.faq-accordion .accordion-button {
+    padding: 1rem 1.25rem;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-weight: 600;
+    box-shadow: none;
+}
+.faq-accordion .accordion-button:not(.collapsed) {
+    background-color: var(--bg-secondary);
+    color: var(--accent-color);
+}
+.faq-accordion .accordion-button:focus { box-shadow: none; border-color: var(--accent-color); }
+.faq-accordion .accordion-body {
+    padding: 1rem 1.25rem;
+    color: var(--text-secondary);
+    background-color: var(--bg-primary);
+}
+
+/* ---------- Szerelés - útmutató kártyák ---------- */
+.repair-card {
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 9px;
+    background-color: var(--bg-primary);
+}
+.repair-head {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-primary);
+    border: none;
+    color: var(--text-primary);
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: none;
+    transition: background 0.2s ease;
+}
+.repair-head:hover { background: var(--bg-secondary); }
+.repair-head .repair-icon {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: var(--bg-secondary);
+    color: var(--accent-color);
+    flex-shrink: 0;
+}
+.repair-head .chevron { transition: transform 0.3s ease; color: var(--text-secondary); }
+.repair-card.open .repair-head .chevron { transform: rotate(180deg); }
+.repair-body {
+    display: none;
+    padding: 0 1.25rem 1.25rem;
+    color: var(--text-secondary);
+}
+.repair-card.open .repair-body { display: block; }
+.repair-steps {
+    counter-reset: rstep;
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+}
+.repair-steps li {
+    counter-increment: rstep;
+    padding: 0.6rem 0 0.6rem 2.5rem;
+    position: relative;
+    color: var(--text-primary);
+}
+.repair-steps li::before {
+    content: counter(rstep);
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* ---------- Tab tartalom ---------- */
+.tab-content > .tab-pane { animation: fadeIn 0.25s ease; }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Mobil törések ---------- */
+@media (max-width: 767.98px) {
+    .profile-hero { padding: 1.25rem; text-align: center; }
+    .profile-hero .d-flex.gap-4 { flex-direction: column; align-items: center !important; gap: 1rem !important; }
+    .profile-stat { width: 100%; min-width: 0; text-align: left; }
+    .profile-panel { padding: 1.25rem; }
+    .ride-table thead { display: none; }
+    .ride-table, .ride-table tbody, .ride-table tr, .ride-table td { display: block; width: 100%; }
+    .ride-table tr {
+        margin-bottom: 0.75rem;
+        padding: 0.75rem;
+        border: 1px solid var(--border-color);
+        border-radius: 9px;
+    }
+    .ride-table td { padding: 0.35rem 0; border: none; display: flex; justify-content: space-between; align-items: center; }
+    .ride-table td::before { content: attr(data-label); color: var(--text-secondary); font-size: 0.8rem; font-weight: 600; }
+    .ride-table td:last-child { justify-content: flex-end; }
+    .chart-bars { height: 160px; }
+    .chart-label { font-size: 0.65rem; }
+}

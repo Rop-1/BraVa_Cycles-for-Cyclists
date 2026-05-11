@@ -1,156 +1,379 @@
-.mobil-navigacio {
-    display: none;
-}
+/* ============================================================
+   MOBILE - mobil specifikus stílusok és törések
+   ============================================================ */
+
+/* ---------- Mobil fejléc (logó sáv) ---------- */
+.mobil-navigacio { display: none; }
 .mobile-logo-container {
     display: none;
-    text-align: center;
-    padding: 8px 0;
-    background-color: var(--bg-primary);
     position: sticky;
     top: 0;
     z-index: 1020;
-    box-shadow: 0 2px 10px var(--shadow-color);
+    padding: 10px 18px;
+    background-color: var(--bg-primary);
+    box-shadow: 0 1px 0 var(--border-color);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-.mobile-logo img {
-    max-height: 40px;
-    width: auto;
+.mobile-logo { flex: 1; display: flex; justify-content: center; }
+.mobile-logo img { max-height: 36px; width: auto; }
+.mobile-top-icons { display: flex; align-items: center; gap: 14px; }
+.mobile-top-icons a { position: relative; color: var(--text-primary); }
+.mobile-top-icons i { font-size: 22px; }
+.mobile-cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -7px;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
 }
+
+/* ---------- Mobil kereső sáv ---------- */
+.mobile-search-bar { padding: 10px 16px; background: var(--bg-primary); }
+.mobile-search-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: var(--bg-secondary);
+}
+.mobile-search-inner i { font-size: 17px; color: var(--text-secondary); }
+.mobile-search-inner input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--text-primary);
+    outline: none;
+}
+.mobile-search-inner input::placeholder { color: var(--text-secondary); }
+
+/* ---------- Mobil kategória pirulák ---------- */
+.mobile-cats {
+    display: flex;
+    gap: 8px;
+    padding: 10px 16px 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.mobile-cats::-webkit-scrollbar { display: none; }
+.mobile-cat {
+    padding: 7px 16px;
+    border: none;
+    border-radius: 20px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.mobile-cat.aktiv,
+.mobile-cat:hover { background: var(--accent-color); color: #fff; }
+
+/* ---------- Mobil szekció címsorok ---------- */
+.mobile-section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 16px 10px;
+}
+.mobile-section-head h2 { font-size: 16px; font-weight: 700; }
+.mobile-section-head a { font-size: 13px; font-weight: 600; color: var(--accent-color); text-decoration: none; }
+
+/* ---------- Mobil hero görgető ---------- */
+.mobile-hero-scroll {
+    display: flex;
+    gap: 12px;
+    padding: 0 16px 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.mobile-hero-scroll::-webkit-scrollbar { display: none; }
+.mobile-hero-card {
+    position: relative;
+    flex-shrink: 0;
+    min-width: 190px;
+    height: 230px;
+    overflow: hidden;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.mobile-hero-card:aktiv { transform: scale(0.97); }
+.mobile-hero-card img { width: 100%; height: 100%; object-fit: cover; }
+.mobile-hero-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    background: var(--accent-color);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+}
+.mobile-hero-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 14px 12px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.65));
+}
+.mobile-hero-info p { margin-bottom: 2px; color: #fff; font-size: 13px; font-weight: 600; }
+.mobile-hero-info span { color: rgba(255,255,255,0.8); font-size: 12px; }
+
+/* ---------- Mobil promóciós sáv ---------- */
+.mobile-promo-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0 16px 16px;
+    padding: 16px;
+    border-radius: 16px;
+    background: var(--accent-color);
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+.mobile-promo-strip:aktiv { opacity: 0.9; }
+.mobile-promo-strip p { margin-bottom: 3px; color: #fff; font-size: 13px; font-weight: 600; }
+.mobile-promo-strip span { color: rgba(255,255,255,0.8); font-size: 12px; }
+.mobile-promo-pill {
+    flex-shrink: 0;
+    padding: 8px 14px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.22);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* ---------- Mobil termék rács ---------- */
+.mobile-product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 0 16px 16px;
+}
+.mobile-product-card {
+    overflow: hidden;
+    border-radius: 14px;
+    background: var(--bg-primary);
+    box-shadow: 0 4px 16px var(--shadow-color);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.mobile-product-card:aktiv { transform: scale(0.97); }
+.mobile-product-card img { width: 100%; height: 130px; object-fit: cover; }
+.mobile-product-body { padding: 10px 12px 12px; }
+.mobile-product-name { margin-bottom: 4px; color: var(--text-primary); font-size: 13px; font-weight: 600; line-height: 1.3; }
+.mobile-product-stars { display: flex; align-items: center; gap: 2px; margin-bottom: 6px; }
+.mobile-product-stars i { font-size: 10px; color: #ffc41f; }
+.mobile-product-stars span { margin-left: 2px; color: var(--text-secondary); font-size: 11px; }
+.mobile-product-row { display: flex; justify-content: space-between; align-items: center; }
+.mobile-product-price { color: var(--accent-color); font-size: 15px; font-weight: 700; }
+.mobile-add-btn {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent-color);
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.mobile-add-btn:hover { background: var(--accent-hover); }
+.mobile-add-btn i { font-size: 16px; color: #fff; }
+
+/* ---------- Mobil alsó navigáció ---------- */
 .mobile-bottom-nav {
+    display: none;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: var(--bg-primary);
     z-index: 1030;
-    box-shadow: 0 -2px 10px var(--shadow-color);
-    padding: 8px 0;
-    display: none;
+    padding: 8px 0 14px;
+    background-color: var(--bg-primary);
+    box-shadow: 0 -1px 0 var(--border-color);
 }
-.mobile-nav-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 10px;
-}
-.mobile-nav-item {
-    position: relative;
-    flex: 1;
-    text-align: center;
-}
+.mobile-nav-container { display: flex; justify-content: space-around; align-items: center; }
+.mobile-nav-item { position: relative; flex: 1; text-align: center; }
 .mobile-nav-link {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 3px;
+    padding: 4px 0;
+    color: var(--text-secondary);
     text-decoration: none;
-    color: var(--text-primary);
-    padding: 5px 0;
-    border-radius: 8px;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease;
 }
-.mobile-nav-link i {
-    font-size: 24px;
-    margin-bottom: 4px;
-}
-.mobile-nav-label {
-    font-size: 11px;
-    font-weight: 500;
-}
+.mobile-nav-link i { font-size: 24px; }
+.mobile-nav-label { font-size: 10px; font-weight: 500; }
 .mobile-nav-link:hover,
-.mobile-nav-link.active {
-    color: var(--accent-color);
-}
-.mobile-nav-link.active i {
-    color: var(--accent-color);
-}
+.mobile-nav-link.aktiv { color: var(--accent-color); }
+.mobile-nav-pip { width: 4px; height: 4px; margin: 1px auto 0; border-radius: 50%; background: var(--accent-color); }
 .mobile-dropdown-menu {
     position: absolute;
-    bottom: 100%;
+    bottom: calc(100% + 8px);
     left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--bg-primary);
-    min-width: 180px;
-    box-shadow: 0 -5px 15px var(--shadow-color);
-    border-radius: 12px 12px 0 0;
-    padding: 10px 0;
-    margin-bottom: 10px;
-    display: none;
     z-index: 1050;
+    min-width: 180px;
+    padding: 8px 0;
+    border: 0.5px solid var(--border-color);
+    border-radius: 14px;
+    background-color: var(--bg-primary);
+    box-shadow: 0 -4px 24px var(--shadow-color);
+    display: none;
+    transform: translateX(-50%);
 }
-.mobile-dropdown-menu::before {
+.mobile-dropdown-menu::after {
     content: '';
     position: absolute;
     top: 100%;
     left: 50%;
+    border: 7px solid transparent;
+    border-top-color: var(--border-color);
     transform: translateX(-50%);
-    border: 8px solid transparent;
-    border-top-color: var(--bg-primary);
 }
 .mobile-dropdown-item {
     display: block;
-    padding: 12px 20px;
-    text-decoration: none;
+    padding: 11px 18px;
     color: var(--text-primary);
     font-size: 14px;
-    transition: all 0.2s ease;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.15s ease;
 }
-.mobile-dropdown-item:hover {
-    background-color: var(--bg-secondary);
-    color: var(--accent-color);
-}
+.mobile-dropdown-item:hover { background-color: var(--bg-secondary); color: var(--accent-color); }
+
+/* ============================================================
+   MOBIL TÖRÉSPONTOK
+   ============================================================ */
+
+/* ---------- Tablet és kisebb (max 991.98px) ---------- */
 @media (max-width: 991.98px) {
-    iframe{
-        width: 450px;
-        height: 750px;
-    }
-    html, body {
-        max-width: 100%;
-    }
-    header {
-        display: none !important;
-    }
-    .mobile-logo-container {
-        display: block !important;
-    }
-    .mobil-navigacio {
-        display: block !important;
-    }
-    .mobile-bottom-nav {
-        position: fixed !important;
-        bottom: 0 !important;
-        left: 0 !important;
-        width: 100vw !important;
-        display: block !important;
-    }
-    body {
-        padding-bottom: 70px;
-    }
+    html, body { max-width: 100%; overflow-x: hidden; }
+    body { padding-bottom: 78px; }
+
+    header { display: none !important; }
+    .mobile-logo-container { display: flex !important; }
+    .mobil-navigacio { display: block !important; }
+    .mobile-bottom-nav { display: block !important; }
+
+    .container, .container-fluid { padding-left: 16px !important; padding-right: 16px !important; }
+    section, .section { padding-left: 16px; padding-right: 16px; }
+    h1, h2, h3, h4, h5, h6, p { max-width: 100%; word-break: break-word; }
+
+    /* Általános rendezés mobil nézetben */
+    .row { row-gap: 1.25rem; }
+    main { padding-top: .5rem; }
+
+    /* Lépcső sáv */
+    .step-label { display: none; }
+    .step { min-width: 60px; }
+
+    /* Checkout/Wizard panel */
+    .cart-panel, .summary-panel { padding: 1.25rem; }
+    .summary-sticky { position: static; }
+
+    /* Scroll-to-top elkerülje a mobil navot */
+    .scroll-to-top { right: 16px; bottom: 88px; width: 44px; height: 44px; }
+
+    /* Iframe */
+    iframe { width: 100% !important; height: 480px !important; }
+
+    /* Home carousel mobilon */
+    .carousel-container { margin: 0; padding: 0 16px; box-shadow: none; }
+    .carousel-scroll { padding: 10px 0; gap: 14px; }
+    .carousel-card { min-width: 200px; height: auto; min-height: 320px; }
+    .carousel-card img { height: 160px; }
+    .carousel-card .card-body { padding: 10px 12px 50px; }
+    .carousel-card .card-body .d-flex { left: 10px; right: 10px; }
+    .carousel-btn.prev { left: 4px; }
+    .carousel-btn.next { right: 4px; }
+
+    /* Hero szöveg + kép szépen egymás alá */
+    .h-img { box-shadow: 0 8px 24px var(--shadow-color); }
+    .nav .container { box-shadow: none; }
+
+    /* "Segítségre van szükséged?" rész - egymás alá */
+    .k-val-sec .col-lg-6 { padding-right: 0 !important; padding-left: 0 !important; }
+    .k-val-sec .col-lg-6:last-of-type { padding: 1.5rem !important; margin-top: 1rem; }
+
+    /* Hírlevél - szépre rendezve */
+    .hirlevel .col-lg-6 { padding: 1rem !important; }
+
+    /* Lábléc oszlopok megfelelően eloszlanak */
+    footer .col-lg-3 { margin-bottom: 1rem; }
 }
+
+/* ---------- Mobil (max 767.98px) ---------- */
 @media (max-width: 767.98px) {
-    .info-section .d-flex.justify-content-center.gap-5 {
-        flex-wrap: wrap;
-        gap: 0 !important;
-    }
-    .info-section .d-flex.gap-2.p-3 {
-        width: 50%;
-        box-sizing: border-box;
-    }
-    .carousel-card {
-        min-width: 220px;
-    }
+    /* Hero szakasz */
+    section .col-lg-6 h1 { width: auto !important; }
+    section .col-lg-6 p { width: auto !important; }
+    section .d-flex.gap-5 { flex-direction: column; gap: 12px !important; }
+    section .d-flex.gap-5 .btn { width: 100%; }
+
+    /* "Mit keresel?" kártyák */
+    .product-card.ps-0, .product-card.pe-0 { padding-left: 0 !important; padding-right: 0 !important; }
+    .overlay { padding: 18px; }
+
+    /* Info sáv - két oszlopos rács */
+    .info-section .d-flex.justify-content-center.gap-5 { flex-wrap: wrap; gap: 0 !important; }
+    .info-section .d-flex.gap-2.p-3 { box-sizing: border-box; width: 50%; }
+    .info-section .col-lg-12 { padding: 0.5rem !important; }
+
+    /* Carousel kártya */
+    .carousel-card { min-width: 220px; }
+
+    /* Hero kép mobil görgetőben */
+    .mobile-hero-card { min-width: 170px; height: 210px; }
+
+    .logo { margin: 0 auto; }
+
+    /* Shops kapcsolat oldal */
+    .kapcsolat { margin-top: 1rem; }
+
+    /* Lábléc szöveg igazítása */
+    footer .row .col-lg-6:last-child p { text-align: left !important; }
+    footer .col-lg-3 { text-align: center; }
 }
+
+/* ---------- Kis mobil (max 575.98px) ---------- */
+@media (max-width: 575.98px) {
+    .cart-item-img { width: 70px; height: 70px; }
+    .step::after { width: calc(100% - 24px); left: calc(50% + 12px); }
+    .mobile-product-grid { gap: 8px; padding: 0 12px 16px; }
+    .checkout-header, .wizard-header { padding: 0.5rem 0.75rem; }
+    .checkout-header .nav-inner,
+    .wizard-header .nav-inner { padding: 0.5rem 0.75rem; }
+}
+
+/* ---------- Desktop (min 992px): mobil elemek elrejtése ---------- */
 @media (min-width: 992px) {
     .mobil-navigacio,
     .mobile-logo-container,
-    .mobile-bottom-nav {
-        display: none !important;
-    }
+    .mobile-bottom-nav { display: none !important; }
 }
-@media (max-width: 991.98px) {
-            .step-label { display: none; }
-            .step { min-width: 60px; }
-            .cart-panel, .summary-panel { padding: 1.25rem; }
-        }
-        @media (max-width: 575.98px) {
-            .cart-item-img { width: 70px; height: 70px; }
-            .step::after { width: calc(100% - 24px); left: calc(50% + 12px); }
-        }
