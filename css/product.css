@@ -23,7 +23,7 @@
     transition: all 0.3s ease;
 }
 .thumbnail-container img:hover,
-.thumbnail-container img.aktiv {
+.thumbnail-container img.active {
     opacity: 1;
     border-color: var(--accent-color);
 }
@@ -60,11 +60,11 @@
 .breadcrumb { padding: 0; background-color: transparent; }
 .breadcrumb-item a { color: var(--text-primary); text-decoration: none; }
 .breadcrumb-item a:hover { color: var(--accent-color); }
-.breadcrumb-item.aktiv { color: var(--text-secondary); }
+.breadcrumb-item.active { color: var(--text-secondary); }
 
 /* ---------- Fülek (Leírás / Specifikáció) ---------- */
 .nav-tabs .nav-link { color: var(--text-primary); border: none; }
-.nav-tabs .nav-link.aktiv { color: var(--accent-color); background-color: transparent; }
+.nav-tabs .nav-link.active { color: var(--accent-color); background-color: transparent; }
 
 /* ---------- Specifikáció táblázat ---------- */
 .table { color: var(--text-primary); }

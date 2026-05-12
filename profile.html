@@ -20,7 +20,7 @@
                     </div>
                     <div class="col-lg-8">
                         <nav>
-                            <ul class="d-flex justify-content-center gap-5 mt-2 list-unstyled mb-0">
+                            <ul class="d-flex justify-content-center gap-5 mt-2 list-unstyled">
                                 <li><a class="text-decoration-none" href="index.html" title="Főoldal">Főoldal</a></li>
                                 <li><a class="text-decoration-none" href="webshop.html" title="Webshop">Webshop</a></li>
                                 <li><a class="text-decoration-none" href="shops.html" title="Üzleteink">Üzleteink</a></li>
@@ -31,7 +31,7 @@
                         <nav>
                             <ul class="d-flex justify-content-center gap-5 mt-2 list-unstyled mb-0">
                                 <li><a class="text-decoration-none ikon" href="checkout.html" title="Kosár"><i class="bi bi-cart"></i></a></li>
-                                <li><a class="text-decoration-none ikon aktiv" href="profile.html" title="Profil"><i class="bi bi-person-circle"></i></a></li>
+                                <li><a class="text-decoration-none ikon nari" href="profile.html" title="Profil"><i class="bi bi-person-circle"></i></a></li>
                                 <li><a class="text-decoration-none ikon theme-toggle" href="javascript:void(0)" onclick="toggleTheme()"><i class="bi bi-brightness-high-fill ikon"></i></a></li>
                             </ul>
                         </nav>
@@ -46,26 +46,26 @@
             <!-- Üdvözlő kártya -->
             <div class="profile-hero mb-4">
                 <div class="d-flex gap-4 align-items-center flex-wrap">
-                    <div class="profile-avatar"><i class="bi bi-person-fill"></i></div>
+                    <div class="profile-avatar"><i class="bi bi-card-image nari"></i></div>
                     <div class="flex-grow-1">
                         <p class="text-secondary small mb-1 fw-semibold">Üdvözlünk újra,</p>
-                        <h2 class="fw-bold mb-1">Kovács Bence <span class="nari">·</span> Garázsom</h2>
+                        <h2 class="fw-bold mb-1">Kiss Anna <span class="nari">&bull;</span> Garázsom</h2>
                         <p class="text-secondary mb-0 small">
-                            <i class="bi bi-bicycle me-1 nari"></i>Aktív versenyző &middot;
-                            <i class="bi bi-calendar3 me-1 nari ms-1"></i>Tag 2024 márciusa óta
+                            <i class="bi bi-bicycle me-1 nari"></i>Hobbista &bull;
+                            <i class="bi bi-calendar3 me-1 nari ms-1"></i>Tag 2026 Máj. óta
                         </p>
                     </div>
                     <div class="d-flex gap-2 flex-wrap" style="min-width: 0;">
-                        <div class="profile-stat">
-                            <div class="stat-val"><span id="heroMonthKm">0</span> km</div>
+                        <div class="profile-stat rounded-3 p-3">
+                            <div class="stat-val fw-bold fs-5"><span id="heroMonthKm">0</span> km</div>
                             <div class="stat-lbl">Ebben a hónapban</div>
                         </div>
-                        <div class="profile-stat">
-                            <div class="stat-val"><span id="heroYearKm">0</span> km</div>
+                        <div class="profile-stat rounded-3 p-3">
+                            <div class="stat-val fw-bold fs-5"><span id="heroYearKm">0</span> km</div>
                             <div class="stat-lbl">Idén összesen</div>
                         </div>
-                        <div class="profile-stat">
-                            <div class="stat-val"><span id="heroYearRides">0</span></div>
+                        <div class="profile-stat rounded-3 p-3">
+                            <div class="stat-val fw-bold fs-5"><span id="heroYearRides">0</span> db</div>
                             <div class="stat-lbl">Túra idén</div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
             <!-- Tabok -->
             <ul class="nav nav-pills profile-tabs mb-4 flex-nowrap" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active aktiv" id="tab-garage" data-bs-toggle="tab" data-bs-target="#tab-content-garage" type="button" role="tab">
+                    <button class="nav-link active" id="tab-garage" data-bs-toggle="tab" data-bs-target="#tab-content-garage" type="button" role="tab">
                         <i class="bi bi-bicycle me-1"></i>Garázs
                     </button>
                 </li>
@@ -105,24 +105,27 @@
                     </button>
                 </li>
             </ul>
-            <div class="tab-content"> 
+
+            <!-- Tab tartalmak -->
+            <div class="tab-content">
+                <!-- GARÁZS -->
                 <div class="tab-pane fade show active" id="tab-content-garage" role="tabpanel">
                     <div class="profile-panel">
                         <h4 class="profile-panel-title"><i class="bi bi-bicycle nari me-2"></i>A bicajaim</h4>
                         <div class="row g-3">
                             <div class="col-lg-4 col-md-6">
-                                <div class="garage-card">
-                                    <img class="garage-img" src="assets/prods/cervelo-r5-permafrost.jpg" alt="Cervelo R5">
+                                <div class="garage-card rounded-3">
+                                    <img class="garage-img" src="assets/prods/van-rysel-2.avif" alt="Van Rysel RCR F">
                                     <div class="garage-body">
-                                        <p class="garage-brand mb-0">Cervelo</p>
-                                        <p class="garage-name mb-2">Cervelo R5</p>
+                                        <p class="garage-brand mb-0">Van Rysel</p>
+                                        <p class="garage-name mb-2">Van Rysel RCR</p>
                                         <p class="text-secondary small mb-3">Országút &middot; M / 54 váz</p>
                                         <button class="btn i-web w-100 garage-fix-btn"><i class="bi bi-tools me-2"></i>Szerelési útmutató</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6">
-                                <div class="garage-card">
+                                <div class="garage-card rounded-3">
                                     <img class="garage-img" src="assets/prods/trek-fuel-ex.jpg" alt="Trek Fuel EX">
                                     <div class="garage-body">
                                         <p class="garage-brand mb-0">Trek</p>
@@ -133,7 +136,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6">
-                                <div class="garage-card">
+                                <div class="garage-card rounded-3">
                                     <img class="garage-img" src="assets/prods/specialized-diverge-str.webp" alt="Specialized Diverge">
                                     <div class="garage-body">
                                         <p class="garage-brand mb-0">Specialized</p>
@@ -202,8 +205,8 @@
                         <h4 class="profile-panel-title"><i class="bi bi-journal-text nari me-2"></i>Edzésnapló</h4>
                         <p class="text-secondary small mb-3">Vidd fel az adatokat egy túra után – az átlagsebességet automatikusan kiszámoljuk neked.</p>
 
-                        <form id="rideForm" class="ride-form">
-                            <div class="row g-3 align-items-end">
+                        <form id="rideForm">
+                            <div class="row rounded-3 p-3 my-3 g-3 align-items-end rideForm">
                                 <div class="col-md-3">
                                     <label class="form-label" for="rideDate">Dátum</label>
                                     <input type="date" class="form-control" id="rideDate" required>
@@ -252,28 +255,28 @@
                         <h4 class="profile-panel-title"><i class="bi bi-bar-chart-line nari me-2"></i>Statisztika &middot; ez a hónap</h4>
                         <div class="row g-3 mb-4">
                             <div class="col-6 col-lg-3">
-                                <div class="stat-tile">
+                                <div class="stat-tile text-center rounded-3 p-3">
                                     <i class="bi bi-speedometer2"></i>
                                     <div class="tile-val" id="statTotalKm">0 km</div>
                                     <div class="tile-lbl">Megtett táv</div>
                                 </div>
                             </div>
                             <div class="col-6 col-lg-3">
-                                <div class="stat-tile">
+                                <div class="stat-tile text-center rounded-3 p-3">
                                     <i class="bi bi-bicycle"></i>
                                     <div class="tile-val" id="statRideCount">0</div>
                                     <div class="tile-lbl">Túrák száma</div>
                                 </div>
                             </div>
                             <div class="col-6 col-lg-3">
-                                <div class="stat-tile">
+                                <div class="stat-tile text-center rounded-3 p-3">
                                     <i class="bi bi-stopwatch"></i>
                                     <div class="tile-val" id="statTotalTime">0 perc</div>
                                     <div class="tile-lbl">Aktív idő</div>
                                 </div>
                             </div>
                             <div class="col-6 col-lg-3">
-                                <div class="stat-tile">
+                                <div class="stat-tile text-center rounded-3 p-3">
                                     <i class="bi bi-lightning-charge-fill"></i>
                                     <div class="tile-val" id="statAvgSpeed">0 km/h</div>
                                     <div class="tile-lbl">Átlag sebesség</div>
@@ -289,14 +292,14 @@
                         <h5 class="fw-bold mb-3">Csúcsadatok</h5>
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <div class="stat-tile">
+                                <div class="stat-tile text-center rounded-3 p-3">
                                     <i class="bi bi-trophy-fill"></i>
                                     <div class="tile-val" id="statLongest">0 km</div>
                                     <div class="tile-lbl">Leghosszabb túrád</div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="stat-tile">
+                                <div class="stat-tile text-center rounded-3 p-3">
                                     <i class="bi bi-fire"></i>
                                     <div class="tile-val" id="statFastest">0 km/h</div>
                                     <div class="tile-lbl">Leggyorsabb átlag</div>
@@ -577,7 +580,7 @@
                     </a>
                 </div>
                 <div class="mobile-nav-item">
-                    <a href="profile.html" class="mobile-nav-link aktiv" title="Fiók">
+                    <a href="profile.html" class="mobile-nav-link active" title="Fiók">
                         <i class="bi bi-person-circle"></i>
                         <span class="mobile-nav-label">Fiók</span>
                     </a>

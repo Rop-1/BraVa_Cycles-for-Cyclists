@@ -20,7 +20,7 @@
                     </div>
                     <div class="col-lg-8">
                         <nav>
-                            <ul class="d-flex justify-content-center gap-5 mt-2 list-unstyled mb-0">
+                            <ul class="d-flex justify-content-center gap-5 mt-2 list-unstyled">
                                 <li><a class="text-decoration-none aktiv" href="index.html" title="Főoldal">Főoldal</a></li>
                                 <li><a class="text-decoration-none" href="webshop.html" title="Webshop">Webshop</a></li>
                                 <li><a class="text-decoration-none" href="shops.html" title="Üzleteink">Üzleteink</a></li>
@@ -48,8 +48,12 @@
                         <h1 class="w-50 mb-3">Találd meg <br>a <span class="nari text-capitalize fst-italic">tökéletes</span> kerékpárt</h1>
                         <p class="w-75">Több mint 1000 kerékpár, alkatrész és szerszám egy helyen. Szakértő tanácsadás, ingyenes átvétel, két év garancia.</p>
                         <div class="d-flex gap-5 mt-5">
-                            <button type="button" class="btn i-web"><i class="bi bi-shop-window me-2"></i> Irány a Webshop</button>
-                            <button type="button" class="btn nari k-val border"><i class="bi bi-bicycle me-2"></i> Kerékpár választó</button>
+                            <form action="webshop.html">
+                                <button type="submit" class="btn i-web"><i class="bi bi-shop-window me-2"></i> Irány a Webshop</button>
+                            </form>
+                            <form action="kerekpar-valaszto.html">
+                                <button type="submit" class="btn k-val border"><i class="bi bi-bicycle me-2"></i> Kerékpár választó</button>
+                            </form>
                         </div>
                     </div>
                     <div class="col-lg-6 p-0">
@@ -225,7 +229,9 @@
                             <li class="nari fw-bold mb-3"><i class="bi bi-3-circle-fill"></i> Add meg a magasságod</li>
                             <li class="nari fw-bold mb-3"><i class="bi bi-4-circle-fill"></i> Állítsd be a költségkereted</li>
                         </ul>
-                        <a href="kerekpar-valaszto.html" class="btn nari k-val border mb-3 text-decoration-none"><i class="bi bi-bicycle me-2"></i> Kerékpár választó</a>
+                        <form action="kerekpar-valaszto.html">
+                            <button href="kerekpar-valaszto.html" type="submit" class="btn k-val border mb-3"><i class="bi bi-bicycle me-2"></i> Kerékpár választó</button>
+                        </form>
                     </div>
                 </div>
             </div>

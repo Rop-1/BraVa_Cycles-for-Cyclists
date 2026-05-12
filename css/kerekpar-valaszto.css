@@ -27,7 +27,7 @@
     transition: background-color 0.3s ease;
 }
 .wizard-step-content { display: none; flex: 1; }
-.wizard-step-content.aktiv { display: flex; flex-direction: column; }
+.wizard-step-content.active { display: flex; flex-direction: column; }
 
 /* ---------- Opció rács / kártya ---------- */
 .option-grid {

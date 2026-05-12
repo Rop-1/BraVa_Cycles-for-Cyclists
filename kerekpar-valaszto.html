@@ -42,7 +42,7 @@
                     <p class="text-secondary mb-4">Válaszolj néhány kérdésre és megtaláljuk a tökéletes kerékpárt!</p>
 
                     <div class="wizard-panel">
-                        <div class="wizard-step-content  aktiv b-n" id="wizardStep1">
+                        <div class="wizard-step-content active" id="wizardStep1">
                             <h5 class="fw-bold mb-1">Mire fogod használni?</h5>
                             <p class="text-secondary small mb-0">Válaszd ki az elsődleges felhasználást</p>
                             <div class="option-grid">
@@ -258,9 +258,9 @@ function buildStepBar() {
     var $bar = $('#stepBar')
     $bar.empty()
     for (var i = 1; i <= totalSteps; i++) {
-        var isaktiv = i === currentStep
+        var isActive = i === currentStep
         var isCompleted = i < currentStep
-        var cls = 'step' + (isaktiv ? ' active' : '') + (isCompleted ? ' completed' : '')
+        var cls = 'step' + (isActive ? ' active' : '') + (isCompleted ? ' completed' : '')
         $bar.append(`
             <div class="${cls}">
                 <div class="step-circle fw-bold small">${isCompleted ? '<i class="bi bi-check"></i>' : i}</div>
@@ -274,8 +274,7 @@ function buildProgressDots() {
     $dots.empty()
     for (var i = 1; i <= totalSteps; i++) {
         var cls = 'progress-dot'
-        if (i === currentStep) cls += ' active'
-        else if (i < currentStep) cls += ' done'
+        if (i < currentStep) cls += ' done'
         $dots.append(`<div class="${cls}"></div>`)
     }
 }
@@ -290,7 +289,7 @@ function updateNav() {
     $('#backBtn').toggleClass('invisible', currentStep <= 1)
     var $next = $('#nextBtn')
     if (currentStep === totalSteps) {
-        $next.html('Megmutatom a találatokat <i class="bi bi-search ms-2"></i>')
+        $next.html('Találatok <i class="bi bi-search ms-2"></i>')
     } else if (currentStep === totalSteps + 1) {
         $next.html('<i class="bi bi-arrow-counterclockwise me-2"></i>Újrakezdem')
     } else {

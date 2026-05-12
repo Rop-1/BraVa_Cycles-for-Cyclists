@@ -44,7 +44,7 @@ function renderCart() {
         subtotal += item.price * qty
         html += `
             <div class="cart-item">
-                <img class="cart-item-img" src="${item.image || 'assets/img/BraVa.png'}" alt="${item.name}">
+                <img class="cart-item-img bg-white rounded-3" src="${item.image || 'assets/img/BraVa.png'}" alt="${item.name}">
                 <div class="cart-item-body">
                     <div class="cart-item-name fw-bold">${item.name}</div>
                     <div class="cart-item-brand small text-secondary mb-2">${item.brand || ''}</div>

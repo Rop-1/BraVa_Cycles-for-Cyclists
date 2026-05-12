@@ -44,10 +44,7 @@
     flex-shrink: 0;
     width: 90px;
     height: 90px;
-    padding: 6px;
     object-fit: contain;
-    border-radius: 8px;
-    background-color: var(--bg-secondary);
 }
 .cart-item-body { flex: 1; }
 .cart-item-price { color: var(--accent-color); }
@@ -68,7 +65,6 @@
     align-items: center;
     justify-content: center;
     border: none;
-    background: var(--bg-secondary);
     color: var(--text-primary);
     cursor: pointer;
     transition: background 0.2s ease;
@@ -179,14 +175,11 @@
 /* ---------- Szállítási info ---------- */
 .shipping-info {
     margin-top: 0.75rem;
-    padding: 0.75rem 1rem;
     border-radius: 8px;
-    background: var(--bg-secondary);
 }
 .shipping-info i { color: var(--accent-color); }
 .shipping-success {
     background: rgba(40,167,69,0.08);
-    border: 1px solid rgba(40,167,69,0.2);
 }
 
 .summary-sticky { position: sticky; top: 90px; }
