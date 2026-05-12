@@ -1,11 +1,3 @@
-/* ============================================================
-   HOME (index.html) - főoldal specifikus stílusok
-   ============================================================ */
-
-/* ---------- Hero kép árnyék ---------- */
-.h-img { box-shadow: var(--shadow-lg); }
-
-/* ---------- "Mit keresel?" kategória kártyák ---------- */
 .product-card .card {
     background-color: var(--bg-primary);
     border: none;
@@ -13,9 +5,8 @@
     overflow: hidden;
     transition: all 0.3s ease;
 }
-.product-card .card:hover { transform: translateY(-5px); }
+.product-card .card:hover, .carousel-card:hover { transform: translateY(-5px); }
 .card-img-top { width: 100%; height: 100%; }
-
 .overlay {
     position: absolute;
     bottom: 0;
@@ -29,21 +20,12 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .product-card:hover .overlay { transform: translateY(0); }
-
-/* ---------- Info sáv (ingyenes szállítás, garancia, stb.) ---------- */
-.info-section .col-lg-12 {
+.info-section .col-lg-12, .k-val-sec .col-lg-6:last-of-type, .hirlevel {
     background-color: var(--bg-primary);
-    box-shadow: var(--shadow-lg);
     transition: background-color 0.3s ease;
 }
 .info-icon { background-color: var(--bg-secondary); transition: background-color 0.3s ease; }
-
-/* ---------- Kiemelt termékek kocsi (carousel) ---------- */
-.carousel-container {
-    position: relative;
-    background-color: var(--bg-primary);
-    box-shadow: var(--shadow-lg);
-}
+.carousel-container { position: relative; background-color: var(--bg-primary); }
 .carousel-scroll {
     display: flex;
     gap: 20px;
@@ -57,10 +39,8 @@
     position: relative;
     border-radius: 9px;
     background-color: var(--bg-primary);
-    box-shadow: var(--shadow-lg);
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.carousel-card:hover { transform: translateY(-5px); }
 .carousel-card img {
     width: 100%;
     height: 200px;
@@ -85,20 +65,6 @@
     transform: translateY(-50%);
     transition: background-color 0.3s ease;
 }
-.carousel-btn:hover { background-color: var(--accent-color); color: #fff; }
+.carousel-btn:hover { background-color: var(--accent-color); }
 .carousel-btn.prev { left: -20px; }
 .carousel-btn.next { right: -20px; }
-
-/* ---------- "Segítségre van szükséged?" rész ---------- */
-.k-val-sec .col-lg-6:last-of-type {
-    background-color: var(--bg-primary);
-    box-shadow: var(--shadow-lg);
-    transition: background-color 0.3s ease;
-}
-
-/* ---------- Hírlevél sáv ---------- */
-.hirlevel {
-    background-color: var(--bg-primary);
-    box-shadow: var(--shadow-lg);
-    transition: background-color 0.3s ease;
-}

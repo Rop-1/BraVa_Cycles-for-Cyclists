@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/kerekpar-valaszto.css">
     <link rel="stylesheet" href="css/mobile.css">
+    <link rel="shortcut icon" href="assets/img/favicon-16x16.webp" type="image/x-icon">
+    <meta name="description" content="Kerékpárok, alkatrészek, szerszámok, szakértő segítséggel 2026 óta.">
     <title>BraVa - Kerékpár választó</title>
 </head>
 <body>
@@ -17,17 +19,11 @@
             <div class="nav-inner">
                 <div class="row align-items-center">
                     <div class="col-4 col-lg-3">
-                        <a href="index.html" class="wizard-logo">
-                            <p class="mb-0"><img src="assets/img/BraVa.png" alt="BraVa"></p>
-                        </a>
+                        <a href="index.html" class="wizard-logo"><p class="mb-0"><img src="assets/img/BraVa.webp" alt="BraVa"></p></a>
                     </div>
-                    <div class="col-8 col-lg-6">
-                        <div class="step-bar" id="stepBar"></div>
-                    </div>
+                    <div class="col-8 col-lg-6"><div class="step-bar" id="stepBar"></div></div>
                     <div class="col-lg-3 d-none d-lg-flex justify-content-end">
-                        <a href="javascript:void(0)" onclick="toggleTheme()" class="theme-toggle text-decoration-none nari ikon">
-                            <i class="bi bi-brightness-high-fill"></i>
-                        </a>
+                        <a href="javascript:void(0)" onclick="toggleTheme()" class="theme-toggle text-decoration-none nari ikon"><i class="bi bi-brightness-high-fill"></i></a>
                     </div>
                 </div>
             </div>
@@ -40,32 +36,15 @@
                 <div class="col-lg-8 k-val-h">
                     <h2 class="fw-bold mb-2">Kerékpár választó</h2>
                     <p class="text-secondary mb-4">Válaszolj néhány kérdésre és megtaláljuk a tökéletes kerékpárt!</p>
-
                     <div class="wizard-panel">
                         <div class="wizard-step-content active" id="wizardStep1">
                             <h5 class="fw-bold mb-1">Mire fogod használni?</h5>
                             <p class="text-secondary small mb-0">Válaszd ki az elsődleges felhasználást</p>
                             <div class="option-grid">
-                                <div class="option-card" data-value="orszaguti">
-                                    <i class="bi bi-bicycle"></i>
-                                    <div class="option-label">Országút</div>
-                                    <div class="option-sub small">Aszfalt, verseny</div>
-                                </div>
-                                <div class="option-card" data-value="mtb">
-                                    <i class="bi bi-tree"></i>
-                                    <div class="option-label">Mountain bike</div>
-                                    <div class="option-sub small">Erdő, terep</div>
-                                </div>
-                                <div class="option-card" data-value="gravel">
-                                    <i class="bi bi-signpost-split"></i>
-                                    <div class="option-label">Gravel</div>
-                                    <div class="option-sub small">Vegyes terep</div>
-                                </div>
-                                <div class="option-card" data-value="varos">
-                                    <i class="bi bi-buildings"></i>
-                                    <div class="option-label">Városi</div>
-                                    <div class="option-sub small">Ingázás, kirándul.</div>
-                                </div>
+                                <div class="option-card" data-value="orszaguti"><i class="bi bi-bicycle"></i><div class="option-label">Országút</div><div class="option-sub small">Aszfalt, verseny</div></div>
+                                <div class="option-card" data-value="mtb"><i class="bi bi-tree"></i><div class="option-label">Mountain bike</div><div class="option-sub small">Erdő, terep</div></div>
+                                <div class="option-card" data-value="gravel"><i class="bi bi-signpost-split"></i><div class="option-label">Gravel</div><div class="option-sub small">Vegyes terep</div></div>
+                                <div class="option-card" data-value="varos"><i class="bi bi-buildings"></i><div class="option-label">Városi</div><div class="option-sub small">Ingázás, kirándul.</div></div>
                             </div>
                         </div>
 
@@ -73,21 +52,9 @@
                             <h5 class="fw-bold mb-1">Mi a tapasztalati szinted?</h5>
                             <p class="text-secondary small mb-0">Ez segít meghatározni az ideális felszereltségi szintet</p>
                             <div class="option-grid mt-3">
-                                <div class="option-card" data-value="kezdo">
-                                    <i class="bi bi-emoji-smile"></i>
-                                    <div class="option-label">Kezdő</div>
-                                    <div class="option-sub small">Most kezdem</div>
-                                </div>
-                                <div class="option-card" data-value="kozepes">
-                                    <i class="bi bi-emoji-sunglasses"></i>
-                                    <div class="option-label">Haladó</div>
-                                    <div class="option-sub small">Néhány éve</div>
-                                </div>
-                                <div class="option-card" data-value="profi">
-                                    <i class="bi bi-trophy"></i>
-                                    <div class="option-label">Profi</div>
-                                    <div class="option-sub small">Versenyző szint</div>
-                                </div>
+                                <div class="option-card" data-value="kezdo"><i class="bi bi-emoji-smile"></i><div class="option-label">Kezdő</div><div class="option-sub small">Most kezdem</div></div>
+                                <div class="option-card" data-value="kozepes"><i class="bi bi-emoji-sunglasses"></i><div class="option-label">Haladó</div><div class="option-sub small">Néhány éve</div></div>
+                                <div class="option-card" data-value="profi"><i class="bi bi-trophy"></i><div class="option-label">Profi</div><div class="option-sub small">Versenyző szint</div></div>
                             </div>
                         </div>
 
@@ -102,14 +69,8 @@
                                 </div>
                                 <input type="range" class="range-track" id="heightSlider" min="150" max="200" value="170">
                                 <div class="d-flex justify-content-between mt-3">
-                                    <div class="text-center">
-                                        <div class="fw-bold" id="frameSizeVal">M / 54</div>
-                                        <div class="text-secondary small">Ajánlott váz</div>
-                                    </div>
-                                    <div class="text-center">
-                                        <div class="fw-bold" id="inseamVal">80 cm</div>
-                                        <div class="text-secondary small">Becsült belső szár</div>
-                                    </div>
+                                    <div class="text-center"><div class="fw-bold" id="frameSizeVal">M / 54</div><div class="text-secondary small">Ajánlott váz</div></div>
+                                    <div class="text-center"><div class="fw-bold" id="inseamVal">80 cm</div><div class="text-secondary small">Becsült belső szár</div></div>
                                 </div>
                             </div>
                         </div>
@@ -126,26 +87,10 @@
                                 <input type="range" class="range-track" id="budgetSlider" min="100000" max="2000000" step="50000" value="800000">
                             </div>
                             <div class="option-grid mt-4">
-                                <div class="option-card" data-value="300000">
-                                    <i class="bi bi-piggy-bank"></i>
-                                    <div class="option-label">~300 000 Ft</div>
-                                    <div class="option-sub small">Belépő szint</div>
-                                </div>
-                                <div class="option-card" data-value="800000">
-                                    <i class="bi bi-cash-stack"></i>
-                                    <div class="option-label">~800 000 Ft</div>
-                                    <div class="option-sub small">Közép kategória</div>
-                                </div>
-                                <div class="option-card" data-value="1500000">
-                                    <i class="bi bi-gem"></i>
-                                    <div class="option-label">~1 500 000 Ft</div>
-                                    <div class="option-sub small">Prémium</div>
-                                </div>
-                                <div class="option-card" data-value="2000000">
-                                    <i class="bi bi-stars"></i>
-                                    <div class="option-label">Nincs limit</div>
-                                    <div class="option-sub small">Csak a legjobb</div>
-                                </div>
+                                <div class="option-card" data-value="300000"><i class="bi bi-piggy-bank"></i><div class="option-label">~300 000 Ft</div><div class="option-sub small">Belépő szint</div></div>
+                                <div class="option-card" data-value="800000"><i class="bi bi-cash-stack"></i><div class="option-label">~800 000 Ft</div><div class="option-sub small">Közép kategória</div></div>
+                                <div class="option-card" data-value="1500000"><i class="bi bi-gem"></i><div class="option-label">~1 500 000 Ft</div><div class="option-sub small">Prémium</div></div>
+                                <div class="option-card" data-value="2000000"><i class="bi bi-stars"></i><div class="option-label">Nincs limit</div><div class="option-sub small">Csak a legjobb</div></div>
                             </div>
                         </div>
 
@@ -164,12 +109,8 @@
                         <div class="mt-auto pt-4">
                             <div class="progress-dots" id="progressDots"></div>
                             <div class="d-flex justify-content-between align-items-center mt-3">
-                                <button class="wizard-back-btn invisible" id="backBtn">
-                                    <i class="bi bi-arrow-left me-2"></i>Vissza
-                                </button>
-                                <button class="wizard-nav-btn fw-bold" id="nextBtn">
-                                    Következő <i class="bi bi-arrow-right ms-2"></i>
-                                </button>
+                                <button class="wizard-back-btn invisible" id="backBtn"><i class="bi bi-arrow-left me-2"></i>Vissza</button>
+                                <button class="wizard-nav-btn fw-bold" id="nextBtn">Következő <i class="bi bi-arrow-right ms-2"></i></button>
                             </div>
                         </div>
                     </div>
@@ -182,36 +123,11 @@
 <nav class="mobil-navigacio">
     <div class="mobile-bottom-nav">
         <div class="mobile-nav-container">
-            <div class="mobile-nav-item">
-                <a href="index.html" class="mobile-nav-link" title="Főoldal">
-                    <i class="bi bi-house"></i>
-                    <span class="mobile-nav-label">Főoldal</span>
-                </a>
-            </div>
-            <div class="mobile-nav-item">
-                <a href="webshop.html" class="mobile-nav-link" title="Webshop">
-                    <i class="bi bi-shop-window"></i>
-                    <span class="mobile-nav-label">Webshop</span>
-                </a>
-            </div>
-            <div class="mobile-nav-item">
-                <a href="checkout.html" class="mobile-nav-link" title="Kosár">
-                    <i class="bi bi-cart"></i>
-                    <span class="mobile-nav-label">Kosár</span>
-                </a>
-            </div>
-            <div class="mobile-nav-item">
-                <a href="shops.html" class="mobile-nav-link" title="Üzleteink">
-                    <i class="bi bi-map"></i>
-                    <span class="mobile-nav-label">Üzleteink</span>
-                </a>
-            </div>
-            <div class="mobile-nav-item">
-                <a href="profile.html" class="mobile-nav-link" title="Fiók">
-                    <i class="bi bi-person-circle"></i>
-                    <span class="mobile-nav-label">Fiók</span>
-                </a>
-            </div>
+            <div class="mobile-nav-item"><a href="index.html" class="mobile-nav-link"><i class="bi bi-house"></i><span class="mobile-nav-label">Főoldal</span></a></div>
+            <div class="mobile-nav-item"><a href="webshop.html" class="mobile-nav-link"><i class="bi bi-shop-window"></i><span class="mobile-nav-label">Webshop</span></a></div>
+            <div class="mobile-nav-item"><a href="checkout.html" class="mobile-nav-link"><i class="bi bi-cart"></i><span class="mobile-nav-label">Kosár</span></a></div>
+            <div class="mobile-nav-item"><a href="shops.html" class="mobile-nav-link"><i class="bi bi-map"></i><span class="mobile-nav-label">Üzleteink</span></a></div>
+            <div class="mobile-nav-item"><a href="profile.html" class="mobile-nav-link"><i class="bi bi-person-circle"></i><span class="mobile-nav-label">Fiók</span></a></div>
         </div>
     </div>
 </nav>
@@ -219,244 +135,7 @@
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/jquery-4.0.0.min.js"></script>
 <script src="js/products.js"></script>
+<script src="js/kerekpar-valaszto.js"></script>
 <script src="js/script.js"></script>
-<script>
-var currentStep = 1
-var totalSteps = 5
-var answers = {
-    usage: null,
-    level: null,
-    height: 170,
-    budget: 800000
-}
-
-var stepLabels = ['Használat', 'Szint', 'Magasság', 'Büdzsé', 'Összefoglalás']
-
-var frameSize = {
-    150: 'XS / 48', 155: 'XS / 49', 160: 'S / 51', 165: 'S / 52',
-    170: 'M / 54', 175: 'M / 56', 180: 'L / 57', 185: 'L / 58',
-    190: 'XL / 60', 195: 'XL / 61', 200: 'XXL / 62'
-}
-
-function getFrameSize(h) {
-    var keys = Object.keys(frameSize).map(Number).sort(function(a,b){return a-b})
-    var closest = keys.reduce(function(prev, curr) {
-        return Math.abs(curr - h) < Math.abs(prev - h) ? curr : prev
-    })
-    return frameSize[closest]
-}
-
-function updateSliderBg($el) {
-    var min = parseFloat($el.attr('min'))
-    var max = parseFloat($el.attr('max'))
-    var val = parseFloat($el.val())
-    var pct = ((val - min) / (max - min)) * 100
-    $el.css('background', `linear-gradient(to right, var(--accent-color) ${pct}%, var(--accent-color) ${pct}%, var(--border-color) ${pct}%)`)
-}
-
-function buildStepBar() {
-    var $bar = $('#stepBar')
-    $bar.empty()
-    for (var i = 1; i <= totalSteps; i++) {
-        var isActive = i === currentStep
-        var isCompleted = i < currentStep
-        var cls = 'step' + (isActive ? ' active' : '') + (isCompleted ? ' completed' : '')
-        $bar.append(`
-            <div class="${cls}">
-                <div class="step-circle fw-bold small">${isCompleted ? '<i class="bi bi-check"></i>' : i}</div>
-                <span class="step-label small fw-medium">${stepLabels[i-1]}</span>
-            </div>`)
-    }
-}
-
-function buildProgressDots() {
-    var $dots = $('#progressDots')
-    $dots.empty()
-    for (var i = 1; i <= totalSteps; i++) {
-        var cls = 'progress-dot'
-        if (i < currentStep) cls += ' done'
-        $dots.append(`<div class="${cls}"></div>`)
-    }
-}
-
-function isStepValid() {
-    if (currentStep === 1) return answers.usage !== null
-    if (currentStep === 2) return answers.level !== null
-    return true
-}
-
-function updateNav() {
-    $('#backBtn').toggleClass('invisible', currentStep <= 1)
-    var $next = $('#nextBtn')
-    if (currentStep === totalSteps) {
-        $next.html('Találatok <i class="bi bi-search ms-2"></i>')
-    } else if (currentStep === totalSteps + 1) {
-        $next.html('<i class="bi bi-arrow-counterclockwise me-2"></i>Újrakezdem')
-    } else {
-        $next.html('Következő <i class="bi bi-arrow-right ms-2"></i>')
-    }
-    $next.prop('disabled', !isStepValid())
-}
-
-function showStep(n) {
-    $('.wizard-step-content').removeClass('active')
-    $(`#wizardStep${n}`).addClass('active')
-    buildStepBar()
-    buildProgressDots()
-    updateNav()
-}
-
-function buildSummary() {
-    var usageMap = { orszaguti: 'Országút', mtb: 'Mountain bike', gravel: 'Gravel', varos: 'Városi' }
-    var levelMap = { kezdo: 'Kezdő', kozepes: 'Haladó', profi: 'Profi' }
-    $('#summaryContent').html(`
-        <div class="d-flex align-items-center gap-3 p-3 rounded-3" style="background:var(--bg-secondary)">
-            <i class="bi bi-bicycle fs-4 nari"></i>
-            <div><div class="text-secondary small">Felhasználás</div><div class="fw-bold">${usageMap[answers.usage] || '-'}</div></div>
-        </div>
-        <div class="d-flex align-items-center gap-3 p-3 rounded-3" style="background:var(--bg-secondary)">
-            <i class="bi bi-person-check fs-4 nari"></i>
-            <div><div class="text-secondary small">Tapasztalat</div><div class="fw-bold">${levelMap[answers.level] || '-'}</div></div>
-        </div>
-        <div class="d-flex align-items-center gap-3 p-3 rounded-3" style="background:var(--bg-secondary)">
-            <i class="bi bi-rulers fs-4 nari"></i>
-            <div><div class="text-secondary small">Magasság / Vázméret</div><div class="fw-bold">${answers.height} cm &nbsp;→&nbsp; ${getFrameSize(answers.height)}</div></div>
-        </div>
-        <div class="d-flex align-items-center gap-3 p-3 rounded-3" style="background:var(--bg-secondary)">
-            <i class="bi bi-cash-stack fs-4 nari"></i>
-            <div><div class="text-secondary small">Büdzsé</div><div class="fw-bold">${formatPrice(answers.budget)}</div></div>
-        </div>`)
-}
-
-function showResults() {
-    var usageTypeMap = { orszaguti: 'orszaguti', mtb: 'mtb', gravel: 'gravel', varos: 'orszaguti' }
-    var targetType = usageTypeMap[answers.usage]
-
-    var filtered = products.filter(function(p) {
-        return p.category === 'kerekpar'
-            && p.price <= answers.budget
-            && (targetType ? p.type === targetType : true)
-    })
-
-    filtered.sort(function(a, b) { return b.price - a.price })
-
-    var top3 = filtered.slice(0, 3)
-
-    if (top3.length === 0) {
-        filtered = products.filter(function(p) { return p.category === 'kerekpar' && p.price <= answers.budget })
-        filtered.sort(function(a, b) { return b.price - a.price })
-        top3 = filtered.slice(0, 3)
-    }
-
-    $('#resultSubtitle').text(`${top3.length} kerékpárt találtunk a preferenciáid alapján`)
-
-    var $grid = $('#resultGrid').empty()
-    top3.forEach(function(product, i) {
-        $grid.append(`
-            <div class="col-md-4">
-                <div class="result-card" onclick="goToProduct(${product.id})">
-                    <img src="${product.images[0]}" alt="${product.name}">
-                    <div class="result-body">
-                        <div class="d-flex align-items-center gap-2 mb-2">
-                            <div class="result-rank small">${i+1}</div>
-                            <span class="small text-secondary">${product.brand}</span>
-                        </div>
-                        <div class="fw-bold mb-1">${product.name}</div>
-                        <div class="nari fw-bold">${formatPrice(product.price)}</div>
-                    </div>
-                </div>
-            </div>`)
-    })
-
-    if (top3.length === 0) {
-        $grid.html('<div class="col-12 text-center py-4"><p class="text-secondary">Nem találtunk terméket a megadott feltételekkel. Próbálj meg magasabb büdzsét beállítani!</p></div>')
-    }
-}
-
-$(document).ready(function() {
-    buildStepBar()
-    buildProgressDots()
-    updateNav()
-
-    $('#heightSlider').on('input', function() {
-        answers.height = parseInt($(this).val())
-        $('#heightVal').text(answers.height + ' cm')
-        $('#frameSizeVal').text(getFrameSize(answers.height))
-        $('#inseamVal').text(Math.round(answers.height * 0.47) + ' cm')
-        updateSliderBg($(this))
-    })
-
-    $('#budgetSlider').on('input', function() {
-        answers.budget = parseInt($(this).val())
-        $('#budgetVal').text(formatPrice(answers.budget))
-        $('#wizardStep4 .option-card').removeClass('selected')
-        updateSliderBg($(this))
-    })
-
-    updateSliderBg($('#heightSlider'))
-    updateSliderBg($('#budgetSlider'))
-
-    $(document).on('click', '#wizardStep1 .option-card', function() {
-        $('#wizardStep1 .option-card').removeClass('selected')
-        $(this).addClass('selected')
-        answers.usage = $(this).data('value')
-        updateNav()
-    })
-
-    $(document).on('click', '#wizardStep2 .option-card', function() {
-        $('#wizardStep2 .option-card').removeClass('selected')
-        $(this).addClass('selected')
-        answers.level = $(this).data('value')
-        updateNav()
-    })
-
-    $(document).on('click', '#wizardStep4 .option-card', function() {
-        $('#wizardStep4 .option-card').removeClass('selected')
-        $(this).addClass('selected')
-        answers.budget = parseInt($(this).data('value'))
-        $('#budgetSlider').val(answers.budget)
-        $('#budgetVal').text(formatPrice(answers.budget))
-        updateSliderBg($('#budgetSlider'))
-    })
-
-    $('#nextBtn').on('click', function() {
-        if (currentStep === totalSteps + 1) {
-            currentStep = 1
-            answers = { usage: null, level: null, height: 170, budget: 800000 }
-            $('#wizardStep1 .option-card, #wizardStep2 .option-card, #wizardStep4 .option-card').removeClass('selected')
-            $('#heightSlider').val(170)
-            $('#heightVal').text('170 cm')
-            $('#frameSizeVal').text(getFrameSize(170))
-            $('#budgetSlider').val(800000)
-            $('#budgetVal').text(formatPrice(800000))
-            updateSliderBg($('#heightSlider'))
-            updateSliderBg($('#budgetSlider'))
-            showStep(1)
-            return
-        }
-        if (currentStep === totalSteps) {
-            showResults()
-            currentStep = totalSteps + 1
-            showStep(6)
-            $('#progressDots').hide()
-            return
-        }
-        if (currentStep === totalSteps - 1) buildSummary()
-        currentStep++
-        showStep(currentStep)
-    })
-
-    $('#backBtn').on('click', function() {
-        if (currentStep === totalSteps + 1) {
-            currentStep = totalSteps
-            $('#progressDots').show()
-            showStep(currentStep)
-            return
-        }
-        currentStep--
-        showStep(currentStep)
-    })
-})
-</script>
 </body>
 </html>

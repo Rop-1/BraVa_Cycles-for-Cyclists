@@ -1,15 +1,7 @@
-/* ============================================================
-   PROFILE (profile.html) - "Garázs" profil oldal stílusok
-   A meglévő design nyelvezetét követi (shadow-lg, accent-color,
-   bg-primary kártyák, rounded-3)
-   ============================================================ */
-
-/* ---------- Hero / Üdvözlő kártya ---------- */
 .profile-hero {
     padding: 2rem;
     border-radius: 12px;
     background-color: var(--bg-primary);
-    box-shadow: var(--shadow-lg);
     transition: background-color 0.3s ease;
 }
 .profile-avatar {
@@ -19,19 +11,15 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    color: #fff;
     font-size: 2.25rem;
     flex-shrink: 0;
 }
 .profile-stat .stat-lbl { color: var(--text-secondary); font-size: 0.8rem; }
-
-/* ---------- Tab navigáció (nav-pills override) ---------- */
 .profile-tabs {
     gap: 0.5rem;
     padding: 0.5rem;
     border-radius: 12px;
     background-color: var(--bg-primary);
-    box-shadow: var(--shadow-lg);
     overflow-x: auto;
     scrollbar-width: none;
     flex-wrap: nowrap;
@@ -50,16 +38,12 @@
 .profile-tabs .nav-link:hover { color: var(--accent-color); }
 .profile-tabs .nav-link.active {
     background-color: var(--accent-color);
-    color: #fff;
     box-shadow: 0 4px 12px rgba(255,117,31,0.25);
 }
-
-/* ---------- Tartalom kártya (közös panel) ---------- */
 .profile-panel {
     padding: 1.75rem;
     border-radius: 12px;
     background-color: var(--bg-primary);
-    box-shadow: var(--shadow-lg);
     transition: background-color 0.3s ease;
 }
 .profile-panel-title {
@@ -68,26 +52,12 @@
     border-bottom: 1px solid var(--border-color);
     font-weight: 700;
 }
-
-/* ---------- Garázs - bicikli kártyák ---------- */
-.garage-card {
-    height: 100%;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-.garage-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-}
-.garage-card .garage-img {
-    width: 400px !important;
-    height: 240px;
-}
+.garage-card { height: 100%; overflow: hidden; transition: all 0.3s ease; }
+.garage-card:hover { transform: translateY(-4px); }
+.garage-card .garage-img { width: 400px !important; height: 240px; }
 .garage-card .garage-body { padding: 1rem; }
 .garage-card .garage-brand { color: var(--text-secondary); font-size: 0.8rem; }
 .garage-card .garage-name { font-weight: 700; }
-
-/* ---------- Rendelések - lista ---------- */
 .order-item {
     padding: 1rem;
     border: 1px solid var(--border-color);
@@ -122,11 +92,7 @@
 }
 .ride-table tr:last-child td { border-bottom: none; }
 .ride-table .ride-speed { color: var(--accent-color); font-weight: 700; }
-.ride-empty {
-    padding: 2.5rem 1rem;
-    text-align: center;
-    color: var(--text-secondary);
-}
+.ride-empty { padding: 2.5rem 1rem; text-align: center; color: var(--text-secondary); }
 .ride-empty i { font-size: 2.5rem; color: var(--border-color); margin-bottom: 0.75rem; }
 .ride-del-btn {
     width: 32px;
@@ -143,15 +109,10 @@
     box-shadow: none;
 }
 .ride-del-btn:hover { background: rgba(220,53,69,0.1); color: var(--error); }
-
 .stat-tile i { font-size: 1.75rem; color: var(--accent-color); margin-bottom: 0.5rem; }
 .stat-tile .tile-val { font-size: 1.75rem; font-weight: 700; line-height: 1.1; }
 .stat-tile .tile-lbl { color: var(--text-secondary); font-size: 0.85rem; }
-
-.chart-wrap {
-    padding: 1.25rem;
-    border-radius: 9px;
-}
+.chart-wrap { padding: 1.25rem; border-radius: 9px; }
 .chart-bars {
     display: flex;
     align-items: flex-end;
@@ -188,8 +149,6 @@
     white-space: nowrap;
 }
 .chart-label { font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; }
-
-/* ---------- FAQ akkordion override ---------- */
 .faq-accordion .accordion-item {
     margin-bottom: 0.5rem;
     border: 1px solid var(--border-color);
@@ -204,18 +163,13 @@
     font-weight: 600;
     box-shadow: none;
 }
-.faq-accordion .accordion-button:not(.collapsed) {
-    background-color: var(--bg-secondary);
-    color: var(--accent-color);
-}
+.faq-accordion .accordion-button:not(.collapsed) { background-color: var(--bg-secondary); color: var(--accent-color); }
 .faq-accordion .accordion-button:focus { box-shadow: none; border-color: var(--accent-color); }
 .faq-accordion .accordion-body {
     padding: 1rem 1.25rem;
     color: var(--text-secondary);
     background-color: var(--bg-primary);
 }
-
-/* ---------- Szerelés - útmutató kártyák ---------- */
 .repair-card {
     overflow: hidden;
     margin-bottom: 1rem;
@@ -251,18 +205,9 @@
 }
 .repair-head .chevron { transition: transform 0.3s ease; color: var(--text-secondary); }
 .repair-card.open .repair-head .chevron { transform: rotate(180deg); }
-.repair-body {
-    display: none;
-    padding: 0 1.25rem 1.25rem;
-    color: var(--text-secondary);
-}
+.repair-body { display: none; padding: 0 1.25rem 1.25rem; color: var(--text-secondary); }
 .repair-card.open .repair-body { display: block; }
-.repair-steps {
-    counter-reset: rstep;
-    list-style: none;
-    padding: 0;
-    margin: 0.5rem 0 0;
-}
+.repair-steps { counter-reset: rstep; list-style: none; padding: 0; margin: 0.5rem 0 0; }
 .repair-steps li {
     counter-increment: rstep;
     padding: 0.6rem 0 0.6rem 2.5rem;
@@ -281,19 +226,14 @@
     justify-content: center;
     border-radius: 50%;
     background: var(--accent-color);
-    color: #fff;
     font-size: 0.75rem;
     font-weight: 700;
 }
-
-/* ---------- Tab tartalom ---------- */
 .tab-content > .tab-pane { animation: fadeIn 0.25s ease; }
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(8px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
-/* ---------- Mobil törések ---------- */
 @media (max-width: 767.98px) {
     .profile-hero { padding: 1.25rem; text-align: center; }
     .profile-hero .d-flex.gap-4 { flex-direction: column; align-items: center !important; gap: 1rem !important; }
@@ -301,12 +241,7 @@
     .profile-panel { padding: 1.25rem; }
     .ride-table thead { display: none; }
     .ride-table, .ride-table tbody, .ride-table tr, .ride-table td { display: block; width: 100%; }
-    .ride-table tr {
-        margin-bottom: 0.75rem;
-        padding: 0.75rem;
-        border: 1px solid var(--border-color);
-        border-radius: 9px;
-    }
+    .ride-table tr { margin-bottom: 0.75rem; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 9px; }
     .ride-table td { padding: 0.35rem 0; border: none; display: flex; justify-content: space-between; align-items: center; }
     .ride-table td::before { content: attr(data-label); color: var(--text-secondary); font-size: 0.8rem; font-weight: 600; }
     .ride-table td:last-child { justify-content: flex-end; }

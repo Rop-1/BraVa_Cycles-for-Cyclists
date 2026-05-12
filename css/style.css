@@ -1,11 +1,4 @@
-/* ============================================================
-   GLOBAL STYLES - minden oldalon használt közös szabályok
-   (változók, tipográfia, fejléc, lábléc, közös elemek)
-   ============================================================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-
-/* ---------- Téma változók ---------- */
 :root {
     --bg-primary: #ffffff;
     --bg-secondary: #f5efe6;
@@ -29,85 +22,39 @@
     --overlay-bg: rgba(0,0,0,0.85);
     --border-color: #404040;
 }
-
-/* ---------- Tipográfia ---------- */
-body {
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-p, span, h1, h2, h3, h4, h5, h6 { color: var(--text-primary); transition: color 0.3s ease; }
-.nari { color: var(--accent-color) !important; }
-
-/* ---------- Fejléc / Navigáció ---------- */
+body { font-family: "Quicksand", sans-serif; }
+body, .nav .container, .k-val, .form-control, .form-control:focus, .modal-content { background-color: var(--bg-primary); }
+p, span, h1, h2, h3, h4, h5, h6, ul li a, footer a, .v-web, .k-val, .form-control, .form-control:focus, .modal-content, .step.completed .step-label { color: var(--text-primary); }
+p, ul li a, .go, .step::after, footer, .step-circle, span, h1, h2, h3, h4, h5, h6, ul li a, footer a, .v-web, .k-val, body, .checkout-header .nav-inner, .scroll-to-top, .nav .container, .form-control, .theme-toggle, .summary-panel { transition: all 0.3s ease; }
+.nari, .aktiv, ul li a:hover, .kats a:hover, footer a:hover, .v-web:hover, .step.active .step-label, .step.aktiv .step-label { color: var(--accent-color) !important; }
 header { position: sticky; top: 2.6%; z-index: 1000; }
-.nav .container { background-color: var(--bg-primary); box-shadow: var(--shadow-lg); transition: background-color 0.3s ease; }
-.rideForm, .profile-stat, .stat-tile, .chart-wrap, .shipping-info, .cart-item-img, .profile-avatar, .garage-card, .shipping-success{
-    box-shadow: 22px 19px 40px 8px var(--shadow-color);
-}
-
-ul li a, footer a, .v-web { color: var(--text-primary); transition: color 0.3s ease; }
-ul li a, .go { border-bottom: 0.5px solid transparent; transition: all 0.2s ease-in; }
+.kats a, .i-web, .i-web:hover, .k-val:hover, .scroll-to-top, .cart-badge, .step.completed .step-circle, .qty-btn:hover, .checkout-btn, .promo-input-group button, .carousel-btn:hover, .wizard-nav-btn, .result-rank, .mobile-cart-badge, .mobile-cat:hover, .mobile-hero-badge, .mobile-hero-info p, .mobile-promo-strip p, .mobile-promo-pill, .mobile-add-btn i, .lightbox-btn, .profile-avatar, .promo-card h3, .badge-out-of-stock, .promo-card p { color: var(--bg-primary); }
+button, .nav .container, footer, .rideForm, .profile-stat, .stat-tile, .chart-wrap, .shipping-info, .cart-item-img, .profile-avatar, .garage-card, .shipping-success, .promo-body, .checkout-header .nav-inner, .summary-panel, .cart-panel, .h-img, .info-section .col-lg-12, .carousel-container, .carousel-card, .k-val-sec .col-lg-6:last-of-type, .hirlevel, .wizard-header .nav-inner, .wizard-panel, .option-card:hover, .result-card:hover, .mobile-product-card, .mobile-bottom-nav, .filter-badge, .mobile-dropdown-menu, .profile-hero, .profile-tabs, .profile-panel, .garage-card:hover, .kapcsolat, .product-card-shop:hover, .promo-card { box-shadow: var(--shadow-lg); }
 .aktiv { font-weight: bold; border-bottom: 0.5px solid var(--accent-color); }
-.kats a { color: #fff; }
-.aktiv, ul li a:hover, .kats a:hover, footer a:hover, .v-web:hover { color: var(--accent-color); }
-ul li a:hover, .go:hover { border-color: var(--accent-color); }
-.ikon:hover { border: none; }
-
-/* ---------- Közös gombok ---------- */
-.btn { border: none; }
-button { box-shadow: var(--shadow-lg); }
-.i-web { background-color: var(--accent-color); color: #fff; }
-.i-web:hover { background-color: var(--accent-hover); color: #fff; }
-.k-val { background-color: var(--bg-primary); color: var(--text-primary); transition: all 0.3s ease; }
-.k-val:hover { background-color: var(--accent-color); color: #fff; }
-
-/* ---------- Űrlap mezők ---------- */
-.form-control {
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
-}
-.form-control:focus {
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    border-color: var(--accent-color);
-    outline: none;
-}
-
-/* ---------- Téma váltó, scroll-to-top ---------- */
-.theme-toggle { cursor: pointer; transition: transform 0.3s ease; }
+ul li a:hover, .go:hover, .form-control:focus, .step.active .step-circle, .step.aktiv .step-circle, .step.completed .step-circle { border-color: var(--accent-color); }
+.ikon:hover, .btn { border: none; }
+.i-web, .k-val:hover, .scroll-to-top, .step.completed::after, .step.active .step-circle, .step.aktiv .step-circle, .step.completed .step-circle { background-color: var(--accent-color); }
+.i-web:hover, .scroll-to-top:hover { background-color: var(--accent-hover); }
+.form-control { border: 1px solid var(--border-color); }
+.theme-toggle { cursor: pointer; }
+.modal-header { border-bottom: 1px solid var(--border-color); }
+.modal-footer { border-top: 1px solid var(--border-color); }
+a[href="checkout.html"] { position: relative; }
 .scroll-to-top {
     position: fixed;
     right: 30px;
     bottom: 30px;
     width: 50px;
     height: 50px;
-    background-color: var(--accent-color);
-    color: #fff;
     border: none;
     border-radius: 50%;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
     z-index: 999;
-    transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(255,117,31,0.3);
 }
-.scroll-to-top i { font-size: 1.2rem; }
 .scroll-to-top.show { opacity: 1; visibility: visible; }
-.scroll-to-top:hover { background-color: var(--accent-hover); }
-
-/* ---------- Modális ablak ---------- */
-.modal-content { background-color: var(--bg-primary); color: var(--text-primary); }
-.modal-header { border-bottom: 1px solid var(--border-color); }
-.modal-footer { border-top: 1px solid var(--border-color); }
-
-/* ---------- Kosár badge ---------- */
-a[href="checkout.html"] { position: relative; }
 .cart-badge {
     position: absolute;
     top: -6px;
@@ -116,16 +63,10 @@ a[href="checkout.html"] { position: relative; }
     height: 18px;
     border-radius: 50%;
     background: var(--accent-color);
-    color: #fff;
     font-size: 0.65rem;
     font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     pointer-events: none;
 }
-
-/* ---------- Lépcső sáv (checkout + kerékpár választó megosztott) ---------- */
 .step-bar { display: flex; align-items: center; justify-content: center; }
 .step {
     display: flex;
@@ -142,12 +83,8 @@ a[href="checkout.html"] { position: relative; }
     width: calc(100% - 32px);
     height: 2px;
     background-color: var(--border-color);
-    transition: background-color 0.3s ease;
 }
-.step:last-child::after { display: none; }
-.step.completed::after { background-color: var(--accent-color); }
-/* Checkout-on a teljesített lépés vonala el van rejtve */
-.checkout-wrapper .step.completed::after { display: none; }
+.step:last-child::after, .checkout-wrapper .step.completed::after { display: none; }
 .step-circle {
     width: 32px;
     height: 32px;
@@ -155,23 +92,10 @@ a[href="checkout.html"] { position: relative; }
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--bg-primary);
     border: 2px solid var(--border-color);
     color: var(--text-secondary);
-    transition: all 0.3s ease;
     z-index: 1;
 }
-.step.active .step-circle,
-.step.aktiv .step-circle,
-.step.completed .step-circle {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-    color: #fff;
-}
 .step-label { margin-top: 6px; color: var(--text-secondary); }
-.step.active .step-label,
-.step.aktiv .step-label { color: var(--accent-color); }
-.step.completed .step-label { color: var(--text-primary); }
-
-/* ---------- Lábléc ---------- */
-footer { background-color: var(--bg-primary); box-shadow: var(--shadow-lg); transition: background-color 0.3s ease; }
+.shops-map { width: 100%; max-width: 1300px; height: 600px; border: 0; }
+.kapcsolat { background-color: var(--bg-primary); transition: background-color 0.3s ease; }

@@ -8,43 +8,29 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/checkout.css">
     <link rel="stylesheet" href="css/mobile.css">
+    <link rel="shortcut icon" href="assets/img/favicon-16x16.webp" type="image/x-icon">
+    <meta name="description" content="Kerékpárok, alkatrészek, szerszámok, szakértő segítséggel 2026 óta.">
     <title>BraVa - Kosár</title>
 </head>
 <body>
     <div class="checkout-wrapper">
         <header class="checkout-header">
             <div class="container">
-                <div class="nav-inner">
+                <div class="nav-inner p-3 rounded-3 bg-white">
                     <div class="row align-items-center">
                         <div class="col-4 col-lg-3">
-                            <a href="index.html" class="checkout-logo">
-                                <img src="assets/img/BraVa.png" alt="BraVa">
-                            </a>
+                            <a href="index.html" class="checkout-logo"><img src="assets/img/BraVa.webp" alt="BraVa"></a>
                         </div>
                         <div class="col-8 col-lg-6">
                             <div class="step-bar">
-                                <div class="step akt" id="step1">
-                                    <div class="step-circle fw-bold small">1</div>
-                                    <span class="step-label small fw-medium">Kosár</span>
-                                </div>
-                                <div class="step" id="step2">
-                                    <div class="step-circle fw-bold small">2</div>
-                                    <span class="step-label small fw-medium">Bejelentkezés</span>
-                                </div>
-                                <div class="step" id="step3">
-                                    <div class="step-circle fw-bold small">3</div>
-                                    <span class="step-label small fw-medium">Szállítás</span>
-                                </div>
-                                <div class="step" id="step4">
-                                    <div class="step-circle fw-bold small">4</div>
-                                    <span class="step-label small fw-medium">Fizetés</span>
-                                </div>
+                                <div class="step akt" id="step1"><div class="step-circle fw-bold small">1</div><span class="step-label small fw-medium">Kosár</span></div>
+                                <div class="step" id="step2"><div class="step-circle fw-bold small">2</div><span class="step-label small fw-medium">Bejelentkezés</span></div>
+                                <div class="step" id="step3"><div class="step-circle fw-bold small">3</div><span class="step-label small fw-medium">Szállítás</span></div>
+                                <div class="step" id="step4"><div class="step-circle fw-bold small">4</div><span class="step-label small fw-medium">Fizetés</span></div>
                             </div>
                         </div>
                         <div class="col-lg-3 d-none d-lg-flex justify-content-end">
-                            <a href="javascript:void(0)" onclick="toggleTheme()" class="theme-toggle text-decoration-none nari ikon">
-                                <i class="bi bi-brightness-high-fill"></i>
-                            </a>
+                            <a href="javascript:void(0)" onclick="toggleTheme()" class="theme-toggle text-decoration-none nari ikon"><i class="bi bi-brightness-high-fill"></i></a>
                         </div>
                     </div>
                 </div>
@@ -54,91 +40,63 @@
         <main class="py-5">
             <div class="container">
                 <div class="row g-4 align-items-start">
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 pt-3">
                         <h2 class="fw-bold mb-4">Kosár részletei</h2>
                         <div class="cart-panel">
-                            <h4 class="fw-bold">
-                                <i class="bi bi-cart3 me-2"></i>Termékek
-                                <span class="text-secondary fw-normal fs-6" id="itemCount">(0 termék)</span>
-                            </h4>
+                            <h4 class="fw-bold"><i class="bi bi-cart3 me-2"></i>Termékek <span class="text-secondary fw-normal fs-6" id="itemCount">(0 termék)</span></h4>
                             <div id="cartItems">
                                 <div class="empty-cart">
                                     <i class="bi bi-cart-x fs-1"></i>
                                     <p class="fw-bold mb-1">A kosarad üres</p>
                                     <p class="text-secondary mb-3">Folytasd a vásárlást!</p>
-                                    <a href="webshop.html" class="btn i-web">
-                                        <i class="bi bi-shop-window me-2"></i>Vásárlás folytatása
-                                    </a>
+                                    <a href="webshop.html" class="btn i-web"><i class="bi bi-shop-window me-2"></i>Vásárlás folytatása</a>
                                 </div>
                             </div>
                         </div>
-
                         <div class="cart-panel mt-3">
                             <h4 class="fw-bold"><i class="bi bi-truck me-2"></i>Szállítási idő és költség</h4>
-                            <div class="shipping-info p-3 small">
-                                <i class="bi bi-info-circle me-2"></i>
-                                A szállítási díj és idő a következő lépésben kerül kiszámításra a megadott cím alapján.
-                            </div>
+                            <div class="shipping-info p-3 small"><i class="bi bi-info-circle me-2"></i>A szállítási díj és idő a következő lépésben kerül kiszámításra a megadott cím alapján.</div>
                             <div class="mt-3 p-3 rounded-3 shipping-success">
-                                <p class="mb-0 fw-bold text-success-custom">
-                                    <i class="bi bi-check-circle-fill me-2"></i>
-                                    Ingyenes szállítás 25 000 Ft feletti rendelésnél!
-                                </p>
+                                <p class="mb-0 fw-bold text-success-custom"><i class="bi bi-check-circle-fill me-2"></i>Ingyenes szállítás 25 000 Ft feletti rendelésnél!</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 summary-sticky pt-2">
+                    <div class="col-lg-4 summary-sticky pt-3">
                         <h2 class="fw-bold mb-4">Rendelés összegző</h2>
-                        <div class="summary-panel">
+                        <div class="summary-panel rounded-3">
                             <h4 class="fw-bold"><i class="bi bi-receipt me-2"></i>Összesítő</h4>
-                            <div class="summary-row">
-                                <span class="label">Részösszeg</span>
-                                <span class="val fw-semibold" id="subtotal">0 Ft</span>
-                            </div>
-                            <div class="summary-row">
-                                <span class="label">Szállítás</span>
-                                <span class="val free-shipping fw-semibold" id="shippingCost">A következő lépésben</span>
-                            </div>
-                            <div class="summary-row">
-                                <span class="label">Kedvezmény</span>
-                                <span class="val fw-semibold" id="discount" class="val fw-semibold text-success-custom">- 0 Ft</span>
-                            </div>
+                            <div class="summary-row"><span class="label">Részösszeg</span><span class="val fw-semibold" id="subtotal">0 Ft</span></div>
+                            <div class="summary-row"><span class="label">Szállítás</span><span class="val free-shipping fw-semibold" id="shippingCost">A következő lépésben</span></div>
+                            <div class="summary-row"><span class="label">Kedvezmény</span><span class="val fw-semibold" id="discount">- 0 Ft</span></div>
                             <div class="summary-row total fw-bold">
                                 <span class="label">Összeg <small class="fw-normal text-secondary">(Áfát tartalmazza)</small></span>
                                 <span class="val nari" id="total">0 Ft</span>
                             </div>
-
                             <button class="checkout-btn fw-bold" id="checkoutBtn" disabled>
                                 <i class="bi bi-lock-fill me-2"></i>Szállítási cím kiválasztása<gls-dpm-dialog country="hu" id="test-map"></gls-dpm-dialog>
                             </button>
-                            <button class="promo-toggle fw-semibold" id="promoToggle">
+                            <button class="promo-toggle border-0 rounded-3 p-2 mt-3 mb-0 fw-semibold" id="promoToggle">
                                 <span><i class="bi bi-tag me-2"></i>Promóciós kuponkód</span>
                                 <i class="bi bi-chevron-down" id="promoChevron"></i>
                             </button>
-                            <div class="promo-body" id="promoBody">
-                                <div class="promo-input-group">
-                                    <input type="text" placeholder="Add meg a kuponkódot" id="promoInput">
+                            <div class="promo-body m-0 p-2 rounded-bottom-3" id="promoBody">
+                                <div class="promo-input-group m-0">
+                                    <input type="text" class="p-2 rounded-3" placeholder="Add meg a kuponkódot" id="promoInput">
                                     <button onclick="applyPromo()" class="fw-semibold">Alkalmaz</button>
                                 </div>
                                 <p class="mt-2 mb-0 small" id="promoMsg"></p>
                             </div>
-
                             <ul class="trust-list small">
                                 <li><i class="bi bi-check-circle-fill"></i>365 napos csere vagy visszatérítés</li>
                                 <li><i class="bi bi-check-circle-fill"></i>Ingyenes kiszállítás áruházainkba</li>
                                 <li><i class="bi bi-check-circle-fill"></i>Bankkártyás utánvét fizetés</li>
                                 <li><i class="bi bi-check-circle-fill"></i>2 év kellékszavatosság</li>
-                                <li>
-                                    <i class="bi bi-shield-lock-fill"></i>
-                                    <span>Biztonságos fizetés</span>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="mastercard-logo">
-                                </li>
+                                <li><i class="bi bi-shield-lock-fill"></i><span>Biztonságos fizetés</span><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="mastercard-logo"></li>
                             </ul>
                         </div>
-                        <div class="cont p-3">
+                        <div class="p-3">
                             <a href="webshop.html" class="text-decoration-none v-web"><i class="bi bi-arrow-left">Vissza a webshophoz</i></a>
-                        </div>
                         </div>
                     </div>
                 </div>
@@ -149,58 +107,24 @@
     <nav class="mobil-navigacio">
         <div class="mobile-bottom-nav">
             <div class="mobile-nav-container">
-                <div class="mobile-nav-item">
-                    <a href="index.html" class="mobile-nav-link" title="Főoldal">
-                        <i class="bi bi-house"></i>
-                        <span class="mobile-nav-label">Főoldal</span>
-                    </a>
-                </div>
-                <div class="mobile-nav-item">
-                    <a href="webshop.html" class="mobile-nav-link" title="Webshop">
-                        <i class="bi bi-shop-window"></i>
-                        <span class="mobile-nav-label">Webshop</span>
-                    </a>
-                </div>
-                <div class="mobile-nav-item">
-                    <a href="checkout.html" class="mobile-nav-link aktiv" title="Kosár">
-                        <i class="bi bi-cart"></i>
-                        <span class="mobile-nav-label">Kosár</span>
-                    </a>
-                </div>
-                <div class="mobile-nav-item">
-                    <a href="shops.html" class="mobile-nav-link" title="Üzleteink">
-                        <i class="bi bi-map"></i>
-                        <span class="mobile-nav-label">Üzleteink</span>
-                    </a>
-                </div>
-                <div class="mobile-nav-item">
-                    <a href="profile.html" class="mobile-nav-link" title="Fiók">
-                        <i class="bi bi-person-circle"></i>
-                        <span class="mobile-nav-label">Fiók</span>
-                    </a>
-                </div>
+                <div class="mobile-nav-item"><a href="index.html" class="mobile-nav-link"><i class="bi bi-house"></i><span class="mobile-nav-label">Főoldal</span></a></div>
+                <div class="mobile-nav-item"><a href="webshop.html" class="mobile-nav-link"><i class="bi bi-shop-window"></i><span class="mobile-nav-label">Webshop</span></a></div>
+                <div class="mobile-nav-item"><a href="checkout.html" class="mobile-nav-link nari"><i class="bi bi-cart"></i><span class="mobile-nav-label">Kosár</span></a></div>
+                <div class="mobile-nav-item"><a href="shops.html" class="mobile-nav-link"><i class="bi bi-map"></i><span class="mobile-nav-label">Üzleteink</span></a></div>
+                <div class="mobile-nav-item"><a href="profile.html" class="mobile-nav-link"><i class="bi bi-person-circle"></i><span class="mobile-nav-label">Fiók</span></a></div>
             </div>
         </div>
     </nav>
-                                    <script>
+
+    <script>
     var el = document.getElementById('test-map');
-    el.addEventListener('change', (e) => {
-    console.log(e.detail);
-    alert(e.detail.name);
-    });
-    var btn = document.getElementById('checkoutBtn');
-    btn.addEventListener('click', () => {
-    el.showModal();
-    });
+    el.addEventListener('change', (e) => { console.log(e.detail); alert(e.detail.name); });
+    document.getElementById('checkoutBtn').addEventListener('click', () => { el.showModal(); });
     </script>
-    <!--
-    Javascript to initialize the custom element, it can be placed anywhere.
-    -->
     <script type="module" src="https://map.gls-hungary.com/widget/gls-dpm.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-4.0.0.min.js"></script>
     <script src="js/checkout.js"></script>
     <script src="js/script.js"></script>
-    <script src="https://map.gls-hungary.com/widget/gls-dpm.js"></script>
 </body>
 </html>

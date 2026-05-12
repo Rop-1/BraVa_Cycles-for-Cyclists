@@ -1,4 +1,3 @@
-<!-- webshop.html -->
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -9,33 +8,29 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/webshop.css">
 <link rel="stylesheet" href="css/mobile.css">
+<link rel="shortcut icon" href="assets/img/favicon-16x16.webp" type="image/x-icon">
+<meta name="description" content="Kerékpárok, alkatrészek, szerszámok, szakértő segítséggel 2026 óta.">
 <title>BraVa - Webshop</title>
 </head>
 <body>
 <header>
     <div class="nav m-4">
         <div class="container p-3 rounded-3">
-            <div class="row">
-                <div class="col-lg-2">
-                    <a href="index.html" title="BraVa - Főoldal"><img class="w-50" src="assets/img/BraVa.png" alt="BraVa"></a>
-                </div>
+            <div class="row align-items-center">
+                <div class="col-lg-2"><a href="index.html"><img class="w-50" src="assets/img/BraVa.webp" alt="BraVa"></a></div>
                 <div class="col-lg-8">
-                    <nav>
-                        <ul class="d-flex justify-content-center gap-5 mt-2 list-unstyled">
-                            <li><a class="text-decoration-none" href="index.html" title="Főoldal">Főoldal</a></li>
-                            <li><a class="text-decoration-none aktiv" href="webshop.html" title="Webshop">Webshop</a></li>
-                            <li><a class="text-decoration-none" href="shops.html" title="Üzleteink">Üzleteink</a></li>
-                        </ul> 
-                    </nav>
+                    <nav><ul class="d-flex justify-content-center gap-5 mt-2 list-unstyled">
+                        <li><a class="text-decoration-none" href="index.html">Főoldal</a></li>
+                        <li><a class="text-decoration-none aktiv" href="webshop.html">Webshop</a></li>
+                        <li><a class="text-decoration-none" href="shops.html">Üzleteink</a></li>
+                    </ul></nav>
                 </div>
                 <div class="col-lg-2">
-                    <nav>
-                        <ul class="d-flex justify-content-center gap-5 mt-2 list-unstyled">
-                            <li><a class="text-decoration-none ikon" href="checkout.html" title="Kosár"><i class="bi bi-cart"></i></a></li>
-                            <li><a class="text-decoration-none ikon" href="profile.html" title="Profil"><i class="bi bi-person-circle"></i></a></li>
-                            <li><a class="text-decoration-none ikon theme-toggle" href="javascript:void(0)" onclick="toggleTheme()"><i class="bi bi-brightness-high-fill ikon"></i></a></li>
-                        </ul>
-                    </nav>
+                    <nav><ul class="d-flex justify-content-center gap-5 mt-2 list-unstyled">
+                        <li><a class="text-decoration-none ikon" href="checkout.html"><i class="bi bi-cart"></i></a></li>
+                        <li><a class="text-decoration-none ikon" href="profile.html"><i class="bi bi-person-circle"></i></a></li>
+                        <li><a class="text-decoration-none ikon theme-toggle" href="javascript:void(0)" onclick="toggleTheme()"><i class="bi bi-brightness-high-fill ikon"></i></a></li>
+                    </ul></nav>
                 </div>
             </div>
         </div>
@@ -45,17 +40,13 @@
     <section class="container my-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h1>Webshop</h1>
-            <button class="btn i-web" data-bs-toggle="modal" data-bs-target="#filterModal">
-                <i class="bi bi-funnel me-2"></i>Szűrők
-            </button>
+            <button class="btn i-web" data-bs-toggle="modal" data-bs-target="#filterModal"><i class="bi bi-funnel me-2"></i>Szűrők</button>
         </div>
         <div id="activeFilters" class="mb-3"></div>
         <div id="productGrid" class="row g-4"></div>
     </section>
 </main>
-<button id="scrollToTop" class="scroll-to-top">
-    <i class="bi bi-arrow-up"></i>
-</button>
+<button id="scrollToTop" class="scroll-to-top fs-4"><i class="bi bi-arrow-up"></i></button>
 <div class="modal fade" id="filterModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -66,77 +57,26 @@
             <div class="modal-body">
                 <div class="mb-4">
                     <h6 class="fw-bold mb-3">Kategória</h6>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="kerekpar" id="cat1">
-                        <label class="form-check-label" for="cat1">Kerékpárok</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="alkatresz" id="cat2">
-                        <label class="form-check-label" for="cat2">Alkatrészek</label>
-                    </div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="kerekpar" id="cat1"><label class="form-check-label" for="cat1">Kerékpárok</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="alkatresz" id="cat2"><label class="form-check-label" for="cat2">Alkatrészek</label></div>
                 </div>
                 <div class="mb-4">
                     <h6 class="fw-bold mb-3">Márka</h6>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Cervelo" id="brand1">
-                        <label class="form-check-label" for="brand1">Cervelo</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Trek" id="brand2">
-                        <label class="form-check-label" for="brand2">Trek</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Specialized" id="brand3">
-                        <label class="form-check-label" for="brand3">Specialized</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Shimano" id="brand4">
-                        <label class="form-check-label" for="brand4">Shimano</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Sram" id="brand5">
-                        <label class="form-check-label" for="brand5">Sram</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Continental" id="brand6">
-                        <label class="form-check-label" for="brand6">Continental</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Van Rysel" id="brand7">
-                        <label class="form-check-label" for="brand7">Van Rysel</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Canyon" id="brand8">
-                        <label class="form-check-label" for="brand8">Canyon</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Orbea" id="brand9">
-                        <label class="form-check-label" for="brand9">Orbea</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="DT Swiss" id="brand10">
-                        <label class="form-check-label" for="brand10">DT Swiss</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Maxxis" id="brand11">
-                        <label class="form-check-label" for="brand11">Maxxis</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Fox" id="brand12">
-                        <label class="form-check-label" for="brand12">Fox</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Garmin" id="brand13">
-                        <label class="form-check-label" for="brand13">Garmin</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Wahoo" id="brand14">
-                        <label class="form-check-label" for="brand14">Wahoo</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Fizik" id="brand15">
-                        <label class="form-check-label" for="brand15">Fizik</label>
-                    </div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="Cervelo" id="brand1"><label class="form-check-label" for="brand1">Cervelo</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="Trek" id="brand2"><label class="form-check-label" for="brand2">Trek</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="Specialized" id="brand3"><label class="form-check-label" for="brand3">Specialized</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="Shimano" id="brand4"><label class="form-check-label" for="brand4">Shimano</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="Sram" id="brand5"><label class="form-check-label" for="brand5">Sram</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="Continental" id="brand6"><label class="form-check-label" for="brand6">Continental</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="Van Rysel" id="brand7"><label class="form-check-label" for="brand7">Van Rysel</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="Canyon" id="brand8"><label class="form-check-label" for="brand8">Canyon</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="Orbea" id="brand9"><label class="form-check-label" for="brand9">Orbea</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="DT Swiss" id="brand10"><label class="form-check-label" for="brand10">DT Swiss</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="Maxxis" id="brand11"><label class="form-check-label" for="brand11">Maxxis</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="Fox" id="brand12"><label class="form-check-label" for="brand12">Fox</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="Garmin" id="brand13"><label class="form-check-label" for="brand13">Garmin</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="Wahoo" id="brand14"><label class="form-check-label" for="brand14">Wahoo</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="Fizik" id="brand15"><label class="form-check-label" for="brand15">Fizik</label></div>
                 </div>
                 <div class="mb-4">
                     <h6 class="fw-bold mb-3">Ár</h6>
@@ -147,10 +87,7 @@
                     </div>
                 </div>
                 <div class="mb-4">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="inStock">
-                        <label class="form-check-label" for="inStock">Csak raktáron lévő termékek</label>
-                    </div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" id="inStock"><label class="form-check-label" for="inStock">Csak raktáron lévő termékek</label></div>
                 </div>
             </div>
             <div class="modal-footer">
@@ -164,86 +101,30 @@
     <footer class="py-3 mt-4">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
-                    <p><img class="w-50" src="assets/img/BraVa.png" alt="BraVa logó"></p>
-                    <p>Kerékpárok, alkatrészek, szerszámok, szakértő segítséggel 2026 óta.</p>
-                </div>
-                <div class="col-lg-3 mx-auto">
-                    <p class="fw-bold">Bolt</p>
-                    <ul class="list-unstyled">
-                        <li><a href="webshop.html" title="Webshop" class="text-decoration-none">Webshop</a></li>
-                        <li><a href="kerekpar-valaszto.html" title="Kerékpár választó" class="text-decoration-none">Kerékpár választó</a></li>
-                        <li><a href="webshop.html" title="Akciók" class="text-decoration-none">Akciók</a></li>
-                        <li><a href="webshop.html" title="Újdonságok" class="text-decoration-none">Újdonságok</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 mx-auto">
-                    <p class="fw-bold">Segítség</p>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" title="GY.I.K" class="text-decoration-none">GY.I.K</a></li>
-                        <li><a href="index.html" title="Szállítás" class="text-decoration-none">Szállítás</a></li>
-                        <li><a href="index.html" title="Visszaküldés" class="text-decoration-none">Visszaküldés</a></li>
-                        <li><a href="index.html" title="Újdonságok" class="text-decoration-none">Szerviz</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 mx-auto">
-                    <p class="fw-bold">Cég</p>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" title="Rólunk" class="text-decoration-none">Rólunk</a></li>
-                        <li><a href="index.html" title="Kapcsolat" class="text-decoration-none">Kapcsolat</a></li>
-                        <li><a href="index.html" title="ÁSZF" class="text-decoration-none">ÁSZF</a></li>
-                        <li><a href="index.html" title="Adatvédelem" class="text-decoration-none">Adatvédelem</a></li>
-                    </ul>
-                </div>
+                <div class="col-lg-3"><p><img class="w-50" src="assets/img/BraVa.webp" alt="BraVa logó"></p><p>Kerékpárok, alkatrészek, szerszámok, szakértő segítséggel 2026 óta.</p></div>
+                <div class="col-lg-3 mx-auto"><p class="fw-bold">Bolt</p><ul class="list-unstyled"><li><a href="webshop.html" class="text-decoration-none">Webshop</a></li><li><a href="kerekpar-valaszto.html" class="text-decoration-none">Kerékpár választó</a></li><li><a href="webshop.html" class="text-decoration-none">Akciók</a></li><li><a href="webshop.html" class="text-decoration-none">Újdonságok</a></li></ul></div>
+                <div class="col-lg-3 mx-auto"><p class="fw-bold">Segítség</p><ul class="list-unstyled"><li><a href="index.html" class="text-decoration-none">GY.I.K</a></li><li><a href="index.html" class="text-decoration-none">Szállítás</a></li><li><a href="index.html" class="text-decoration-none">Visszaküldés</a></li><li><a href="index.html" class="text-decoration-none">Szerviz</a></li></ul></div>
+                <div class="col-lg-3 mx-auto"><p class="fw-bold">Cég</p><ul class="list-unstyled"><li><a href="index.html" class="text-decoration-none">Rólunk</a></li><li><a href="index.html" class="text-decoration-none">Kapcsolat</a></li><li><a href="index.html" class="text-decoration-none">ÁSZF</a></li><li><a href="index.html" class="text-decoration-none">Adatvédelem</a></li></ul></div>
             </div>
             <hr>
             <div class="row">
-                <div class="col-lg-6">
-                    <p>&copy; 2026 Minden jog fenntartva &bull; <a class="text-decoration-none" href="index.html">Brava Kft.</a></p>
-                </div>
-                <div class="col-lg-6">
-                    <p class="text-end">Üzemeltető szervezet: <a class="text-decoration-none" href="index.html">Brava host Kft.</a></p>
-                </div>
+                <div class="col-lg-6"><p>&copy; 2026 Minden jog fenntartva &bull; <a class="text-decoration-none" href="index.html">Brava Kft.</a></p></div>
+                <div class="col-lg-6"><p class="text-end">Üzemeltető szervezet: <a class="text-decoration-none" href="index.html">Brava host Kft.</a></p></div>
             </div>
         </div>
     </footer>
 </div>
-    <nav class="mobil-navigacio">
-<div class="mobile-bottom-nav">
-  <div class="mobile-nav-container">
-    <div class="mobile-nav-item">
-      <a href="index.html" class="mobile-nav-link" title="Főoldal">
-        <i class="bi bi-house"></i>
-        <span class="mobile-nav-label">Főoldal</span>
-      </a>
+<nav class="mobil-navigacio">
+    <div class="mobile-bottom-nav">
+        <div class="mobile-nav-container">
+            <div class="mobile-nav-item"><a href="index.html" class="mobile-nav-link"><i class="bi bi-house"></i><span class="mobile-nav-label">Főoldal</span></a></div>
+            <div class="mobile-nav-item"><a href="webshop.html" class="mobile-nav-link nari"><i class="bi bi-shop-window"></i><span class="mobile-nav-label">Webshop</span></a></div>
+            <div class="mobile-nav-item"><a href="checkout.html" class="mobile-nav-link"><i class="bi bi-cart"></i><span class="mobile-nav-label">Kosár</span></a></div>
+            <div class="mobile-nav-item"><a href="shops.html" class="mobile-nav-link"><i class="bi bi-map"></i><span class="mobile-nav-label">Üzleteink</span></a></div>
+            <div class="mobile-nav-item"><a href="profile.html" class="mobile-nav-link"><i class="bi bi-person-circle"></i><span class="mobile-nav-label">Fiók</span></a></div>
+        </div>
     </div>
-    <div class="mobile-nav-item p-0">
-      <a href="webshop.html" class="mobile-nav-link aktiv" title="Webshop">
-        <i class="bi bi-shop-window"></i>
-        <span class="mobile-nav-label">Webshop</span>
-      </a>
-    </div>
-    <div class="mobile-nav-item">
-      <a href="checkout.html" class="mobile-nav-link" title="Kosár">
-        <i class="bi bi-cart"></i>
-        <span class="mobile-nav-label">Kosár</span>
-      </a>
-    </div>
-    <div class="mobile-nav-item mobile-dropdown">
-      <a href="shops.html" class="mobile-nav-link" title="Üzleteink">
-        <i class="bi bi-map"></i>
-        <span class="mobile-nav-label">Üzleteink</span>
-      </a>
-    </div>
-    <div class="mobile-nav-item">
-      <a href="profile.html" class="mobile-nav-link" title="Fiók">
-        <i class="bi bi-person-circle"></i>
-        <span class="mobile-nav-label">Fiók</span>
-      </a>
-    </div>
-  </div>
-</div>
-  </nav>
+</nav>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/jquery-4.0.0.min.js"></script>
 <script src="js/products.js"></script>

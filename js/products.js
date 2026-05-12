@@ -9,7 +9,7 @@ var products = [
         shortDesc: "Prémium országúti versenykerékpár profi teljesítményhez",
         longDesc: "A Cervelo R5 nem csupán egy kerékpár – ez egy mérnöki remekmű, amelyet a legmagasabb szintű versenyteljesítmény iránt elkötelezett kerékpárosok számára fejlesztettek ki. A váz T1100 fokú ultra-prémium karbonból készült, amelyet a Cervelo saját ACT (Autonomous Composite Technology) eljárással dolgoz fel, hogy minden gramm anyag pontosan ott helyezkedjen el, ahol a leghatékonyabb. Az R5 kiemelkedő merevség-tömeg arányával a peloton legnehezebb hegyi befejezőin is versenyelőnyt jelent. A hidraulikus tárcsafékek a legrosszabb időjárási körülmények között is precíz, erős fékerőt biztosítanak, míg az integrált kábelvezetés tiszta aerodinamikai vonalakat eredményez. A BB right csapágybázis maximalizálja az erőátvitelt, a fork geometriája pedig az UCI előírások szerint van optimalizálva a legjobb kezelhetőséghez. Kompatibilis a Shimano Ultegra Di2, Dura-Ace Di2 és SRAM RED AXS váltócsoportokkal. Ha a csúcsteljesítményre vágysz, az R5 a végső válasz.",
         images: [
-            "assets/prods/cervelo-r5-permafrost.jpg",
+            "assets/prods/cervelo-r5-permafrost.webp",
             "assets/prods/cervelo-r5-2.webp",
             "assets/prods/cervelo-r5-3.webp"
         ],
@@ -51,7 +51,7 @@ var products = [
         shortDesc: "Endurance országúti kerékpár maximális kényelemmel és teljesítménnyel",
         longDesc: "A Trek Domane SL7 az endurance országúti kategória abszolút csúcsterméke, amely forradalmasítja azt, ahogy a hosszú távú kerékpározást elképzeljük. A kerékpár lelke a Trek IsoSpeed technológia, amely egy egyedi, elfordítható összekötést alkalmaz a nyeregrőfnél és a villanál, lehetővé téve, hogy a váz és villa 20 mm-rel felfelé és lefelé mozogjon rezgés esetén – mindezt az erőátvitel legkisebb csorbítása nélkül. Ez a technológia a kavicsos utakon, macskaköveken (gondolj csak a Paris-Roubaix-re!) és hosszú hegyi etapokon is megőrzi a kerékpáros energiáját. Az OCLV 600 karbon váz rendkívül könnyű, mégis roppant merev, az új ISO Speed tengelyrendszer pedig akár 4 cm-rel vastagabb gumit enged felszerelni, hogy ne kelljen kompromisszumot kötni a gördülési ellenállás és a kényelem között. A beépített Bontrager Control Bar konzol lehetővé teszi navigációs és teljesítmény-monitoringeszközök rögzítését, míg az integrált kábeles fékrendszer és váltó tiszta és időtálló kinézetet biztosít. A Domane SL7 egyformán otthon érzi magát egy Gran Fondo rajtján és egy nyugodt szombat reggeli hosszútávon.",
         images: [
-            "assets/prods/trek-domane-sl7.png",
+            "assets/prods/trek-domane-sl7.webp",
             "assets/prods/trek-domane-2.webp",
             "assets/prods/trek-domane-3.webp"
         ],
@@ -92,7 +92,7 @@ var products = [
         longDesc: "A Specialized Tarmac SL8 a 2024-es év legbeszéltebb kerékpárja – és joggal. A hatodik generációs Tarmac a világ legjobb profi versenycsapatainak visszajelzései alapján született újjá, és a FACT 12r karbonvázas technológia minden korábbi határt felülmúl. Az SL8 egyedi jellemzője, hogy a korábbi generáció S-Works szintjén teljesít, mégis lényegesen megfizethető ár-érték arányban érhető el. A váz aerodinamikája a Venge és a Tarmac vonalait ötvözi: mérettől függően 2-3 watt megtakarítás érhető el, miközben a kezelhetőség és a hegyi menetelés képessége mit sem csorbul. A new Rider-First Engineered™ kialakítás azt jelenti, hogy minden egyes vázméret külön lett karbonlaminálva, így a kisebb méretű Tarmac ugyanolyan merev és vibráció-csillapítású, mint a nagyobb. Az integrált UDH (Universal Derailleur Hanger) jövőbiztos kompatibilitást garantál, az egyedi S-Works Power sadle pedig a legjobb erőátviteli pozíciót biztosítja. A Shimano 105 Di2 csoporttal felszerelve ez a kerékpár verhetetlen verseny-értéket képvisel.",
         images: [
             "assets/prods/specialized-tarmac.webp",
-            "assets/prods/specialized-tarmac-2.jpg",
+            "assets/prods/specialized-tarmac-2.webp",
             "assets/prods/specialized-tarmac-3.webp"
         ],
         specs: {
@@ -131,11 +131,11 @@ var products = [
         shortDesc: "Francia mérnöki precizitás a legmagasabb fokon – Dura-Ace Di2 felszereléssel",
         longDesc: "A Van Rysel RCR Pro a Decathlon prémium kerékpáros márkájának koronaékszere, és egyben az egyik legjobb ár-érték arányú csúcskategóriás versenykerékpár a piacon. A váz HM (High Modulus) karbonból készül, amelyet a Van Rysel mérnöki csapata több száz órányi szélcsatorna-teszteléssel finomított tökélyre. A RCR Pro egyedülálló Tube Shaping aero-géométriája a legkritikusabb pontokon – a villa, a lánctartók és a felső cső találkozásánál – minimalizálja a légáramlási ellenállást. A teljes Shimano Dura-Ace R9200 Di2 váltócsoport a legjobb elektronikus váltórendszer, amellyel a piacon ma találkozhat: pillanatnyi, csendes és abszolút megbízható váltások 12 sebességen keresztül. Az integrált kábeles tárcsafékrendszer, az aero carbon kerekek és a saját fejlesztésű Van Rysel nyeregszár-rendszer mind azt a célt szolgálják, hogy a kerékpáros teljes energiáját a hajtásra koncentrálhassa. A RCR Pro minden korosztály és teljesítményszint számára az ideális partner: legyen szó granfondoról, régióbajnokságról vagy az edzések legintenzívebb szintjéről.",
         images: [
-            "assets/prods/van-rysel-rcr-f.jpg",
-            "assets/prods/van-rysel-2.avif",
-            "assets/prods/van-rysel-3.avif",
-            "assets/prods/van-rysel-4.avif",
-            "assets/prods/van-rysel-5.avif",
+            "assets/prods/van-rysel-rcr-f.webp",
+            "assets/prods/van-rysel-2.webp",
+            "assets/prods/van-rysel-3.webp",
+            "assets/prods/van-rysel-4.webp",
+            "assets/prods/van-rysel-5.webp",
         ],
         specs: {
             "Váz": "HM Carbon, Aero Tube Shaping, integrált kábelvezetés",
@@ -172,7 +172,7 @@ var products = [
         longDesc: "A Specialized Diverge STR Expert a gravel kerékpározás egy egészen új fejezetét nyitja meg a Future Shock 3.0 rugózási rendszerrel, amely nem csupán a kormánynál, de a nyeregnél is aktív rezgéscsillapítást nyújt – ez a világ első ilyen rendszerű gravel kerékpárja. Az STR (Structured Tube Rear) váztechnológia azt jelenti, hogy a nyeregcső hátsó szekciója rugalmas belső rácsmintázatú struktúrán alapul, amely elnyelni képes a durva kavicsos és erdei utakról érkező ütéseket, miközben a pedálásra fordított erőt maradéktalanul továbbítja a hajtásba. A FACT 11r váz karbon magas modulusú szálakból épül fel, és az endurancia geometria hosszabb stabilitást biztosít, a flared kormány pedig nagyobb kontrollt ad döcögős terepen. Az Expert szint a Shimano GRX 820 Di2 12 sebességes elektronikus gravel váltócsoportot kapja, amely tökéletesen kezeli mind az aszfalt, mind a gravel terep változó igényeit. Dual-position nyeregcső-beépítés és 700c / 650b kompatibilitás biztosítja a maximális rugalmasságot. Ha egyetlen kerékpárra van szükséged, ami minden utat meghódít – ez az.",
         images: [
             "assets/prods/specialized-diverge-str.webp",
-            "assets/prods/specialized-diverge-2.jpg"
+            "assets/prods/specialized-diverge-2.webp"
         ],
         specs: {
             "Váz": "FACT 11r Carbon, STR (Structured Tube Rear), Future Shock 3.0",
@@ -212,7 +212,7 @@ var products = [
         longDesc: "A Trek Checkpoint ALR 5 az a gravel kerékpár, amelyik megmutatja, hogy az alumínium váz nem jelent kompromisszumot – csupán más megközelítést. Az Alpha Platinum alumínium ötvözet hidroformázott csövek révén a váz meghökkentően könnyű és merev, az IsoZone technológia beépítése a felső csőbe és a nyereg-rőfbe pedig biztosítja, hogy a hosszú kavicsos napokon se unjuk meg az ülést. A Checkpoint geometriája hosszabb, laposabb, stabil – tökéletes a granfondo gyorsasághoz és az egynapos bikepacking kalandokhoz egyaránt. A Shimano GRX 600 mechanikus 11 sebességes váltócsoport megbízható és könnyen karbantartható, a hidraulikus tárcsafékek pedig minden terepen biztos lassítást garantálnak. A belső kábelvezetés tiszta vonalakat biztosít, az integrált sárvédőrögzítők, a hátsó csomagtartó-befogadók és az extra kiegészítő-befogadók (villán 3 flakonbefogadó) rendkívül sokoldalúvá teszik. Tubeless-ready kerekek és 45mm-es gumik teszik teljessé a képet.",
         images: [
             "assets/prods/trek-checkpoint-alr.webp",
-            "assets/prods/trek-checkpoint-2.jpg"
+            "assets/prods/trek-checkpoint-2.webp"
         ],
         specs: {
             "Váz": "Alpha Platinum Aluminium, IsoZone, belső kábelvezetés",
@@ -253,7 +253,7 @@ var products = [
         shortDesc: "Innovatív gravel kerékpár VCLS 2.0 rugózással és aero dizájnnal",
         longDesc: "A Canyon Grail CF SL 8 az egyik leginnovatívabb gravel kerékpár a piacon, és aki egyszer ráül, megérti miért. A VCLS 2.0 (Vertical Compliance / Lateral Stiffness) nyeregszár-rendszer egy egyedülálló, karbonból készült lapos lemez-struktúra, amelynek rugalmasságát a mérnökök pontosan hangoltak be: oldalirányban merev, függőlegesen hajlékony. Ennek eredménye: a kavicsos és döcögős terepen a derékra nehezedő ütések drasztikusan csökkennek, míg a sprint-merevség és az erőátvitel nem szenved csorbát. Az extra lapos 'Hover Bar' kormányrendszer szintén rugalmas karbonból készül, és szimmetrikus pozíciót biztosít ülő és álló tekerés során egyaránt. A CF SL 8 Shimano GRX 820 Di2 csoporttal érkezik, 12 sebességes elektronikus váltással, ami gravel terepen különösen értékes. A VCLS-t a Leadville 100-on, a Grinduro-n és a Strade Bianche-n is diadalra vitték – most te is megtapasztalhatod.",
         images: [
-            "assets/prods/canyon-grail-cf-sl.avif",
+            "assets/prods/canyon-grail-cf-sl.webp",
             "assets/prods/canyon-grail-2.webp"
         ],
         specs: {
@@ -290,8 +290,8 @@ var products = [
         shortDesc: "Trail MTB mesterség – 130mm rugózással minden terepen otthon",
         longDesc: "A Trek Fuel EX 9.8 a trail mountain biking egyik legkifinomultabb megtestesítése. A Re:aktiv lengéscsillapítóval felszerelt 130mm-es rugóutas hátsó felfüggesztés mágikusan viselkedik: az apró talajegyenetlenségekre azonnal és folyamatosan reagál, miközben a pedáláshoz szükséges merevséget megőrzi. Ezt a Thru Shaft technológia teszi lehetővé, amely megakadályozza, hogy a lengéscsillapító-test belsejébe kerülő olaj a rugóutat 'elnyelje'. Az OCLV Mountain karbonváz a legkönnyebb és legerősebb anyagból készül, az ABP (Active Braking Pivot) rendszer pedig biztosítja, hogy fékezés közben a rugózás ne merevedjen be – ami a sziklás és gyökeres szakaszokon döntő különbséget jelent. A 29-es kerekek gördülési komfortja és sebessége páratlan, az új geometria pedig szintén hozzájárul a magabiztosabb kezelhetőséghez: hosszabb elérés, laposabb fejcsőszög, magasabb BBra. A SRAM GX Eagle 12 sebességes 1x hajtáslánc 10-52T kazettával biztosítja, hogy a legmeredekebb kaptatón is legyen még váltani hova.",
         images: [
-            "assets/prods/trek-fuel-ex.jpg",
-            "assets/prods/trek-fuel-ex-2.jpeg"
+            "assets/prods/trek-fuel-ex.webp",
+            "assets/prods/trek-fuel-ex-2.webp"
         ],
         specs: {
             "Váz": "OCLV Mountain Carbon, ABP, 130mm rugóút, Boost 148",
@@ -443,7 +443,7 @@ var products = [
         shortDesc: "A Shimano legfelsőbb szintű 12 sebességes elektronikus váltócsoportja",
         longDesc: "A Shimano Dura-Ace R9200 Di2 az a váltócsoport, amelyet a Tour de France csapatok, a profi sprinterek és a hegyi specialisták egyaránt a kerékpárjukra szerelnek. Az R9200 generáció teljesen újratervezett elektromotoros rendszert kapott: a váltásidő a korábbi generációhoz képest 45%-kal csökkent, a motor zajtalan és villámgyors. A 4 dugattyús Dura-Ace fékek kivételes moduláltságot biztosítanak, ami lejtőkön és verseny-kanyarokban érezhetően javítja az irányíthatóságot. A 12 fogú legkisebb kazettafog gördülékenyebb, zajtalanabb és tartósabb láncvezetést eredményez, a 36 fogú belső fogaskerék pedig biztosítja, hogy a meredek alpesi hágókon se legyen hiány egyetlen fogásból sem. A Dura-Ace Di2 egyetlen akkumulátortöltéssel akár 1000 km-en keresztül is megbízhatóan működik – egyszer sem kell aggódni verseny közben. A Pro Tour szintű teljesítmény mostantól a te kerékpárodon is ott lehet.",
         images: [
-            "assets/prods/shimano-dura-ace-r9200.jpg"
+            "assets/prods/shimano-dura-ace-r9200.webp"
         ],
         specs: {
             "Sebességszám": "12 sebességes",
@@ -572,8 +572,8 @@ var products = [
         shortDesc: "Ultra prémium karbon aero kerekek versenyző országúti kerékpárosoknak",
         longDesc: "A DT Swiss ARC 1100 Dicut 50 Carbon a svájci minőség és a verseny aerodinamika tökéletes szintézise. Az 50mm mélységű karbon peremlap erős crosswind-stabilitást biztosít, miközben a 19mm-es belső peremszélesség tökéletesen illeszkedik a modern 28-32C-s gumiabroncsokhoz. A Dicut technológia azt jelenti, hogy a küllők és a kerékagy közötti szög egzakt geometriával épül fel: minden küllő pontosan a legoptimálisabb terheléselosztási szögben csatlakozik, ami jobb stiffness-to-weight arányt eredményez. A kerékagy DT Swiss 180 generációs SINC kerámia csapággyal szerelt, ami a legalacsonyabb gördülési ellenállást biztosítja a kerékpár teljes futóművén belül. A Ratchet EXP 36 fogású racsni 10° váltótávolsággal a legprecízebb energiaátvitelt teszi lehetővé. A talpak tubeless-kompatibilisek a legbiztonságosabb futáshoz, a külső peremlap teljes karbon kivitelű lézermetszett mintázattal. Ha Cervelo, Trek vagy Specialized vázra kerülnek – teljes potenciálját kibontakoztatják.",
         images: [
-            "assets/prods/dt-swiss-arc-1100.jpg",
-            "assets/prods/dt-swiss-arc-2.jpg"
+            "assets/prods/dt-swiss-arc-1100.webp",
+            "assets/prods/dt-swiss-arc-2.webp"
         ],
         specs: {
             "Peremlap mélység": "50mm",
@@ -639,7 +639,7 @@ var products = [
         shortDesc: "Prémium GPS kerékpárszámítógép navigációval, visszanavigálással és ANT+/Bluetooth",
         longDesc: "A Wahoo ELEMNT ROAM v2 a kerékpáros GPS-komputerek jelenlegi csúcsára emelkedett. Nagy, 3.5 colos érintőképernyője az összes érzékelő adatát egyszerre jeleníti meg, az intuitív LED-csíkos indikátor rendszer segít a zonák és a teljesítmény azonnali vizualizálásában. A Turn-by-Turn navigáció nemcsak az előre betöltött útvonalakkal működik, de az online Komoot, Strava és Ride with GPS platformokkal szinkronizálva automatikusan átveszi az útvonalterveket, és a következő kanyart mindig időben jelzi – sötétben és borult időben egyaránt. A visszanavigálás funkció minden indításkor elment egy ún. 'breadcrumb' nyomvonalat, ami alapján bármikor visszavezet a kiindulópontra – nem kell attól tartani, hogy eltévedünk. A Wahoo a legnépszerűbb teljesítménymérő pedálrendszerekkel, szívritmusmérőkkel és a Shimano Di2 / SRAM AXS rendszerrel is kommunikál, és az összes adatot egy képernyőn jeleníti meg. Edzés-terv szinkronizáció, CLIMB funkció (automatikusan vált a szintkülönbség kijelzésre), és akár 17 óra üzemidő teljesítik a képet.",
         images: [
-            "assets/prods/wahoo-elemnt-roam.avif"
+            "assets/prods/wahoo-elemnt-roam.webp"
         ],
         specs: {
             "Képernyő": "3.5\" TFT színes érintőképernyő, 360x480 pixel",
@@ -672,7 +672,7 @@ var products = [
         shortDesc: "Kettős oldali teljesítménymérő Look Keo-kompatibilis pedálrendszerrel",
         longDesc: "A Garmin Rally RS200 az egyik legkényelmesebb belépési pont a teljesítménymérés világába, különösen azok számára, akik már Look Keo rendszerű cipőre váltottak. A 'RS' jelzés a Road Shimano-kompatibilis kétoldalas mérőrendszerre utal, de ez a verzió Look Keo kleatokkal működik – ha Shimano SPD-SL cipőt viselsz, a Rally RK200 a te verziód. Mindkét pedálban mérési szenzor van, ami azt jelenti, hogy nemcsak az össz teljesítményt méri, hanem a bal és jobb oldali erőarány különbséget is mutatja – döntő adat az aszimmetria-korrekciós edzések számára. Az adás ANT+ és Bluetooth kettős protokollon történik, ami kompatibilissé teszi szinte minden kerékpárszámítógéppel, okosórával és telefon-alapú edzésalkalmazással. Az Advanced Cycling Dynamics funkció méri az erőszöget, a pedálegyensúlyt, az ülésben töltött időt és a állási ciklusokat – egy komplex biomechanikai profilt ad a kezedbe. A telepcsere mezőn is elvégezhető: CR1/3N elem, kb. 200 óra üzemidővel. A Rally-rendszer nagy előnye, hogy a szenzor-kapszulák más Rally szériás pedálvázakra átszerelhetők – nem kell újra befektetni, ha cipőt váltasz.",
         images: [
-            "assets/prods/garmin-rally-rs200.jpg"
+            "assets/prods/garmin-rally-rs200.webp"
         ],
         specs: {
             "Rendszer": "Kétoldali teljesítménymérő pedál",
@@ -705,7 +705,7 @@ var products = [
         shortDesc: "3D-nyomtatott prémium verseny nyereg – személyre szabott kényelemmel",
         longDesc: "A Fizik Antares R3 Adaptive a nyereggyártás technológiai forradalma: a hagyományos habszivacs párnázás helyett egy teljes egészében 3D-nyomtatott metastruktúra foglalja el az ülőfelszínt. Ez a rácsszerű, folytonosan változó cellasűrűségű polimer struktúra nem egyforma merevséget biztosít minden pontján – az ülőcsontoknál rugalmasabb és engedőbb, a comb belső oldalánál keményebb és iránytartóbb. Ennek eredménye egy nyereg, amely az egyes kerékpárosok egyedi anatómiájához 'alkalmazkodik' anélkül, hogy egyedileg kellene gyártani. Az Antares profilformája lapos, versenyorientált: magas tekerési hatékonyságú pozíciót tesz lehetővé, az orrán a vékonyított profil kényelmes elülső részt biztosít. A 7mm x 9mm ovális cross-section karbon sín 160g alá nyomja a teljes súlyt, miközben a torzítási merevség kiváló. Az R3 jelzés a háromszoros karbon sínre utal – a csúcskategóriás felépítmény alatta van. Elérhető 155mm, 143mm és 130mm szélességben az anatómiának megfelelően.",
         images: [
-            "assets/prods/fizik-antares-r3-adaptive.jpeg"
+            "assets/prods/fizik-antares-r3-adaptive.webp"
         ],
         specs: {
             "Profil": "Flat (lapos)",
@@ -730,25 +730,25 @@ var products = [
 var promoCards = [
     {
         id: "promo1",
-        image: "assets/img/ingyenes-szallitas-25000-felett.png",
+        image: "assets/img/ingyenes-szallitas-25000-felett.webp",
         link: "index.html",
         bgColor: "#ff751f"
     },
     {
         id: "promo2",
-        image: "assets/img/ingyenes-visszakuldes-30-napon-belul.png",
+        image: "assets/img/ingyenes-visszakuldes-30-napon-belul.webp",
         link: "index.html",
         bgColor: "#ff751f"
     },
     {
         id: "promo3",
-        image: "assets/img/1-ev-garanciat-vallalunk-megjelolt-termekekre.png",
+        image: "assets/img/1-ev-garanciat-vallalunk-megjelolt-termekekre.webp",
         link: "index.html",
         bgColor: "#ff751f"
     },
     {
         id: "promo4",
-        image: "assets/img/sajat-szervizhalozat-15-helyszinen.png",
+        image: "assets/img/sajat-szervizhalozat-15-helyszinen.webp",
         link: "index.html",
         bgColor: "#ff751f"
     }

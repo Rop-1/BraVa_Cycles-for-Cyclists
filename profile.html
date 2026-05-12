@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="css/mobile.css">
+    <link rel="shortcut icon" href="assets/img/favicon-16x16.webp" type="image/x-icon">
+    <meta name="description" content="Kerékpárok, alkatrészek, szerszámok, szakértő segítséggel 2026 óta.">
     <title>BraVa - Garázsom</title>
 </head>
 <body>
@@ -15,26 +17,20 @@
         <div class="nav m-4">
             <div class="container p-3 rounded-3">
                 <div class="row align-items-center">
-                    <div class="col-lg-2">
-                        <a href="index.html" title="BraVa - Főoldal"><img class="w-50" src="assets/img/BraVa.png" alt="BraVa"></a>
-                    </div>
+                    <div class="col-lg-2"><a href="index.html"><img class="w-50" src="assets/img/BraVa.webp" alt="BraVa"></a></div>
                     <div class="col-lg-8">
-                        <nav>
-                            <ul class="d-flex justify-content-center gap-5 mt-2 list-unstyled">
-                                <li><a class="text-decoration-none" href="index.html" title="Főoldal">Főoldal</a></li>
-                                <li><a class="text-decoration-none" href="webshop.html" title="Webshop">Webshop</a></li>
-                                <li><a class="text-decoration-none" href="shops.html" title="Üzleteink">Üzleteink</a></li>
-                            </ul>
-                        </nav>
+                        <nav><ul class="d-flex justify-content-center gap-5 mt-2 list-unstyled">
+                            <li><a class="text-decoration-none" href="index.html">Főoldal</a></li>
+                            <li><a class="text-decoration-none" href="webshop.html">Webshop</a></li>
+                            <li><a class="text-decoration-none" href="shops.html">Üzleteink</a></li>
+                        </ul></nav>
                     </div>
                     <div class="col-lg-2">
-                        <nav>
-                            <ul class="d-flex justify-content-center gap-5 mt-2 list-unstyled mb-0">
-                                <li><a class="text-decoration-none ikon" href="checkout.html" title="Kosár"><i class="bi bi-cart"></i></a></li>
-                                <li><a class="text-decoration-none ikon nari" href="profile.html" title="Profil"><i class="bi bi-person-circle"></i></a></li>
-                                <li><a class="text-decoration-none ikon theme-toggle" href="javascript:void(0)" onclick="toggleTheme()"><i class="bi bi-brightness-high-fill ikon"></i></a></li>
-                            </ul>
-                        </nav>
+                        <nav><ul class="d-flex justify-content-center gap-5 mt-2 list-unstyled">
+                            <li><a class="text-decoration-none ikon" href="checkout.html"><i class="bi bi-cart"></i></a></li>
+                            <li><a class="text-decoration-none ikon nari" href="profile.html"><i class="bi bi-person-circle"></i></a></li>
+                            <li><a class="text-decoration-none ikon theme-toggle" href="javascript:void(0)" onclick="toggleTheme()"><i class="bi bi-brightness-high-fill ikon"></i></a></li>
+                        </ul></nav>
                     </div>
                 </div>
             </div>
@@ -43,459 +39,142 @@
 
     <main>
         <section class="container py-4">
-            <!-- Üdvözlő kártya -->
             <div class="profile-hero mb-4">
                 <div class="d-flex gap-4 align-items-center flex-wrap">
                     <div class="profile-avatar"><i class="bi bi-card-image nari"></i></div>
                     <div class="flex-grow-1">
                         <p class="text-secondary small mb-1 fw-semibold">Üdvözlünk újra,</p>
                         <h2 class="fw-bold mb-1">Kiss Anna <span class="nari">&bull;</span> Garázsom</h2>
-                        <p class="text-secondary mb-0 small">
-                            <i class="bi bi-bicycle me-1 nari"></i>Hobbista &bull;
-                            <i class="bi bi-calendar3 me-1 nari ms-1"></i>Tag 2026 Máj. óta
-                        </p>
+                        <p class="text-secondary mb-0 small"><i class="bi bi-bicycle me-1 nari"></i>Hobbista &bull; <i class="bi bi-calendar3 me-1 nari ms-1"></i>Tag 2026 Máj. óta</p>
                     </div>
-                    <div class="d-flex gap-2 flex-wrap" style="min-width: 0;">
-                        <div class="profile-stat rounded-3 p-3">
-                            <div class="stat-val fw-bold fs-5"><span id="heroMonthKm">0</span> km</div>
-                            <div class="stat-lbl">Ebben a hónapban</div>
-                        </div>
-                        <div class="profile-stat rounded-3 p-3">
-                            <div class="stat-val fw-bold fs-5"><span id="heroYearKm">0</span> km</div>
-                            <div class="stat-lbl">Idén összesen</div>
-                        </div>
-                        <div class="profile-stat rounded-3 p-3">
-                            <div class="stat-val fw-bold fs-5"><span id="heroYearRides">0</span> db</div>
-                            <div class="stat-lbl">Túra idén</div>
-                        </div>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <div class="profile-stat rounded-3 p-3"><div class="stat-val fw-bold fs-5"><span id="heroMonthKm">0</span> km</div><div class="stat-lbl">Ebben a hónapban</div></div>
+                        <div class="profile-stat rounded-3 p-3"><div class="stat-val fw-bold fs-5"><span id="heroYearKm">0</span> km</div><div class="stat-lbl">Idén összesen</div></div>
+                        <div class="profile-stat rounded-3 p-3"><div class="stat-val fw-bold fs-5"><span id="heroYearRides">0</span> db</div><div class="stat-lbl">Túra idén</div></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Tabok -->
             <ul class="nav nav-pills profile-tabs mb-4 flex-nowrap" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="tab-garage" data-bs-toggle="tab" data-bs-target="#tab-content-garage" type="button" role="tab">
-                        <i class="bi bi-bicycle me-1"></i>Garázs
-                    </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab-orders" data-bs-toggle="tab" data-bs-target="#tab-content-orders" type="button" role="tab">
-                        <i class="bi bi-box-seam me-1"></i>Rendeléseim
-                    </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab-rides" data-bs-toggle="tab" data-bs-target="#tab-content-rides" type="button" role="tab">
-                        <i class="bi bi-journal-text me-1"></i>Edzésnapló
-                    </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab-stats" data-bs-toggle="tab" data-bs-target="#tab-content-stats" type="button" role="tab">
-                        <i class="bi bi-bar-chart-line me-1"></i>Statisztika
-                    </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab-faq" data-bs-toggle="tab" data-bs-target="#tab-content-faq" type="button" role="tab">
-                        <i class="bi bi-question-circle me-1"></i>GY.I.K
-                    </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab-repair" data-bs-toggle="tab" data-bs-target="#tab-content-repair" type="button" role="tab">
-                        <i class="bi bi-tools me-1"></i>Szerelés
-                    </button>
-                </li>
+                <li class="nav-item" role="presentation"><button class="nav-link active" id="tab-garage" data-bs-toggle="tab" data-bs-target="#tab-content-garage" type="button"><i class="bi bi-bicycle me-1"></i>Garázs</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" id="tab-orders" data-bs-toggle="tab" data-bs-target="#tab-content-orders" type="button"><i class="bi bi-box-seam me-1"></i>Rendeléseim</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" id="tab-rides" data-bs-toggle="tab" data-bs-target="#tab-content-rides" type="button"><i class="bi bi-journal-text me-1"></i>Edzésnapló</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" id="tab-stats" data-bs-toggle="tab" data-bs-target="#tab-content-stats" type="button"><i class="bi bi-bar-chart-line me-1"></i>Statisztika</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" id="tab-faq" data-bs-toggle="tab" data-bs-target="#tab-content-faq" type="button"><i class="bi bi-question-circle me-1"></i>GY.I.K</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" id="tab-repair" data-bs-toggle="tab" data-bs-target="#tab-content-repair" type="button"><i class="bi bi-tools me-1"></i>Szerelés</button></li>
             </ul>
 
-            <!-- Tab tartalmak -->
             <div class="tab-content">
-                <!-- GARÁZS -->
                 <div class="tab-pane fade show active" id="tab-content-garage" role="tabpanel">
                     <div class="profile-panel">
                         <h4 class="profile-panel-title"><i class="bi bi-bicycle nari me-2"></i>A bicajaim</h4>
                         <div class="row g-3">
-                            <div class="col-lg-4 col-md-6">
-                                <div class="garage-card rounded-3">
-                                    <img class="garage-img" src="assets/prods/van-rysel-2.avif" alt="Van Rysel RCR F">
-                                    <div class="garage-body">
-                                        <p class="garage-brand mb-0">Van Rysel</p>
-                                        <p class="garage-name mb-2">Van Rysel RCR</p>
-                                        <p class="text-secondary small mb-3">Országút &middot; M / 54 váz</p>
-                                        <button class="btn i-web w-100 garage-fix-btn"><i class="bi bi-tools me-2"></i>Szerelési útmutató</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="garage-card rounded-3">
-                                    <img class="garage-img" src="assets/prods/trek-fuel-ex.jpg" alt="Trek Fuel EX">
-                                    <div class="garage-body">
-                                        <p class="garage-brand mb-0">Trek</p>
-                                        <p class="garage-name mb-2">Trek Fuel EX</p>
-                                        <p class="text-secondary small mb-3">MTB &middot; L váz</p>
-                                        <button class="btn i-web w-100 garage-fix-btn"><i class="bi bi-tools me-2"></i>Szerelési útmutató</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="garage-card rounded-3">
-                                    <img class="garage-img" src="assets/prods/specialized-diverge-str.webp" alt="Specialized Diverge">
-                                    <div class="garage-body">
-                                        <p class="garage-brand mb-0">Specialized</p>
-                                        <p class="garage-name mb-2">Specialized Diverge STR</p>
-                                        <p class="text-secondary small mb-3">Gravel &middot; 54 váz</p>
-                                        <button class="btn i-web w-100 garage-fix-btn"><i class="bi bi-tools me-2"></i>Szerelési útmutató</button>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="col-lg-4 col-md-6"><div class="garage-card rounded-3"><img class="garage-img" src="assets/prods/van-rysel-2.webp" alt="Van Rysel RCR F"><div class="garage-body"><p class="garage-brand mb-0">Van Rysel</p><p class="garage-name mb-2">Van Rysel RCR</p><p class="text-secondary small mb-3">Országút &middot; M / 54 váz</p><button class="btn i-web w-100 garage-fix-btn"><i class="bi bi-tools me-2"></i>Szerelési útmutató</button></div></div></div>
+                            <div class="col-lg-4 col-md-6"><div class="garage-card rounded-3"><img class="garage-img" src="assets/prods/trek-fuel-ex.webp" alt="Trek Fuel EX"><div class="garage-body"><p class="garage-brand mb-0">Trek</p><p class="garage-name mb-2">Trek Fuel EX</p><p class="text-secondary small mb-3">MTB &middot; L váz</p><button class="btn i-web w-100 garage-fix-btn"><i class="bi bi-tools me-2"></i>Szerelési útmutató</button></div></div></div>
+                            <div class="col-lg-4 col-md-6"><div class="garage-card rounded-3"><img class="garage-img" src="assets/prods/specialized-diverge-str.webp" alt="Specialized Diverge"><div class="garage-body"><p class="garage-brand mb-0">Specialized</p><p class="garage-name mb-2">Specialized Diverge STR</p><p class="text-secondary small mb-3">Gravel &middot; 54 váz</p><button class="btn i-web w-100 garage-fix-btn"><i class="bi bi-tools me-2"></i>Szerelési útmutató</button></div></div></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- RENDELÉSEK -->
                 <div class="tab-pane fade" id="tab-content-orders" role="tabpanel">
                     <div class="profile-panel">
                         <h4 class="profile-panel-title"><i class="bi bi-box-seam nari me-2"></i>Rendeléseim</h4>
                         <div class="order-item">
-                            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
-                                <div>
-                                    <p class="mb-0 fw-bold">#BR-2026-0428</p>
-                                    <p class="text-secondary small mb-0">2026. március 18. &middot; 2 termék</p>
-                                </div>
-                                <span class="order-status delivered"><i class="bi bi-check-circle-fill me-1"></i>Kiszállítva</span>
-                            </div>
-                            <hr class="my-2">
-                            <div class="d-flex justify-content-between">
-                                <span class="text-secondary">Continental GP5000, Fizik Antares</span>
-                                <strong class="nari">52 980 Ft</strong>
-                            </div>
+                            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2"><div><p class="mb-0 fw-bold">#BR-2026-0428</p><p class="text-secondary small mb-0">2026. március 18. &middot; 2 termék</p></div><span class="order-status delivered"><i class="bi bi-check-circle-fill me-1"></i>Kiszállítva</span></div>
+                            <hr class="my-2"><div class="d-flex justify-content-between"><span class="text-secondary">Continental GP5000, Fizik Antares</span><strong class="nari">52 980 Ft</strong></div>
                         </div>
                         <div class="order-item">
-                            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
-                                <div>
-                                    <p class="mb-0 fw-bold">#BR-2026-0512</p>
-                                    <p class="text-secondary small mb-0">2026. április 7. &middot; 1 termék</p>
-                                </div>
-                                <span class="order-status shipping"><i class="bi bi-truck me-1"></i>Úton</span>
-                            </div>
-                            <hr class="my-2">
-                            <div class="d-flex justify-content-between">
-                                <span class="text-secondary">Shimano Ultegra Group Set</span>
-                                <strong class="nari">649 990 Ft</strong>
-                            </div>
+                            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2"><div><p class="mb-0 fw-bold">#BR-2026-0512</p><p class="text-secondary small mb-0">2026. április 7. &middot; 1 termék</p></div><span class="order-status shipping"><i class="bi bi-truck me-1"></i>Úton</span></div>
+                            <hr class="my-2"><div class="d-flex justify-content-between"><span class="text-secondary">Shimano Ultegra Group Set</span><strong class="nari">649 990 Ft</strong></div>
                         </div>
                         <div class="order-item">
-                            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
-                                <div>
-                                    <p class="mb-0 fw-bold">#BR-2026-0589</p>
-                                    <p class="text-secondary small mb-0">2026. május 2. &middot; 3 termék</p>
-                                </div>
-                                <span class="order-status processing"><i class="bi bi-clock-history me-1"></i>Feldolgozás alatt</span>
-                            </div>
-                            <hr class="my-2">
-                            <div class="d-flex justify-content-between">
-                                <span class="text-secondary">DT Swiss ARC, Maxxis Minion, Fox 36 Float</span>
-                                <strong class="nari">298 500 Ft</strong>
-                            </div>
+                            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2"><div><p class="mb-0 fw-bold">#BR-2026-0589</p><p class="text-secondary small mb-0">2026. május 2. &middot; 3 termék</p></div><span class="order-status processing"><i class="bi bi-clock-history me-1"></i>Feldolgozás alatt</span></div>
+                            <hr class="my-2"><div class="d-flex justify-content-between"><span class="text-secondary">DT Swiss ARC, Maxxis Minion, Fox 36 Float</span><strong class="nari">298 500 Ft</strong></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- EDZÉSNAPLÓ -->
                 <div class="tab-pane fade" id="tab-content-rides" role="tabpanel">
                     <div class="profile-panel">
                         <h4 class="profile-panel-title"><i class="bi bi-journal-text nari me-2"></i>Edzésnapló</h4>
                         <p class="text-secondary small mb-3">Vidd fel az adatokat egy túra után – az átlagsebességet automatikusan kiszámoljuk neked.</p>
-
                         <form id="rideForm">
                             <div class="row rounded-3 p-3 my-3 g-3 align-items-end rideForm">
-                                <div class="col-md-3">
-                                    <label class="form-label" for="rideDate">Dátum</label>
-                                    <input type="date" class="form-control" id="rideDate" required>
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="form-label" for="rideKm">Megtett táv (km)</label>
-                                    <input type="number" min="0.1" step="0.1" class="form-control" id="rideKm" placeholder="pl. 42.5" required>
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="form-label" for="rideMin">Időtartam (perc)</label>
-                                    <input type="number" min="1" step="1" class="form-control" id="rideMin" placeholder="pl. 95" required>
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="form-label">Átlagsebesség</label>
-                                    <div class="form-control fw-bold nari" id="ridePreviewSpeed">— km/h</div>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn i-web"><i class="bi bi-plus-circle me-2"></i>Hozzáadás a naplóhoz</button>
-                                </div>
+                                <div class="col-md-3"><label class="form-label" for="rideDate">Dátum</label><input type="date" class="form-control" id="rideDate" required></div>
+                                <div class="col-md-3"><label class="form-label" for="rideKm">Megtett táv (km)</label><input type="number" min="0.1" step="0.1" class="form-control" id="rideKm" placeholder="pl. 42.5" required></div>
+                                <div class="col-md-3"><label class="form-label" for="rideMin">Időtartam (perc)</label><input type="number" min="1" step="1" class="form-control" id="rideMin" placeholder="pl. 95" required></div>
+                                <div class="col-md-3"><label class="form-label">Átlagsebesség</label><div class="form-control fw-bold nari" id="ridePreviewSpeed">— km/h</div></div>
+                                <div class="col-12"><button type="submit" class="btn i-web"><i class="bi bi-plus-circle me-2"></i>Hozzáadás a naplóhoz</button></div>
                             </div>
                         </form>
-
-                        <div id="rideEmpty" class="ride-empty">
-                            <i class="bi bi-bicycle d-block"></i>
-                            <p class="mb-1 fw-bold">Még nincs rögzített túrád</p>
-                            <p class="small mb-0">Vidd fel az első tekerésed adatait fent!</p>
-                        </div>
-                        <table id="rideTable" class="ride-table" style="display:none">
-                            <thead>
-                                <tr>
-                                    <th>Dátum</th>
-                                    <th>Táv</th>
-                                    <th>Idő</th>
-                                    <th>Átlagsebesség</th>
-                                    <th class="text-end">Művelet</th>
-                                </tr>
-                            </thead>
+                        <div id="rideEmpty" class="ride-empty"><i class="bi bi-bicycle d-block"></i><p class="mb-1 fw-bold">Még nincs rögzített túrád</p><p class="small mb-0">Vidd fel az első tekerésed adatait fent!</p></div>
+                        <table id="rideTable" class="ride-table d-none">
+                            <thead><tr><th>Dátum</th><th>Táv</th><th>Idő</th><th>Átlagsebesség</th><th class="text-end">Művelet</th></tr></thead>
                             <tbody></tbody>
                         </table>
                     </div>
                 </div>
 
-                <!-- STATISZTIKA -->
                 <div class="tab-pane fade" id="tab-content-stats" role="tabpanel">
                     <div class="profile-panel">
                         <h4 class="profile-panel-title"><i class="bi bi-bar-chart-line nari me-2"></i>Statisztika &middot; ez a hónap</h4>
                         <div class="row g-3 mb-4">
-                            <div class="col-6 col-lg-3">
-                                <div class="stat-tile text-center rounded-3 p-3">
-                                    <i class="bi bi-speedometer2"></i>
-                                    <div class="tile-val" id="statTotalKm">0 km</div>
-                                    <div class="tile-lbl">Megtett táv</div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3">
-                                <div class="stat-tile text-center rounded-3 p-3">
-                                    <i class="bi bi-bicycle"></i>
-                                    <div class="tile-val" id="statRideCount">0</div>
-                                    <div class="tile-lbl">Túrák száma</div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3">
-                                <div class="stat-tile text-center rounded-3 p-3">
-                                    <i class="bi bi-stopwatch"></i>
-                                    <div class="tile-val" id="statTotalTime">0 perc</div>
-                                    <div class="tile-lbl">Aktív idő</div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3">
-                                <div class="stat-tile text-center rounded-3 p-3">
-                                    <i class="bi bi-lightning-charge-fill"></i>
-                                    <div class="tile-val" id="statAvgSpeed">0 km/h</div>
-                                    <div class="tile-lbl">Átlag sebesség</div>
-                                </div>
-                            </div>
+                            <div class="col-6 col-lg-3"><div class="stat-tile text-center rounded-3 p-3"><i class="bi bi-speedometer2"></i><div class="tile-val" id="statTotalKm">0 km</div><div class="tile-lbl">Megtett táv</div></div></div>
+                            <div class="col-6 col-lg-3"><div class="stat-tile text-center rounded-3 p-3"><i class="bi bi-bicycle"></i><div class="tile-val" id="statRideCount">0</div><div class="tile-lbl">Túrák száma</div></div></div>
+                            <div class="col-6 col-lg-3"><div class="stat-tile text-center rounded-3 p-3"><i class="bi bi-stopwatch"></i><div class="tile-val" id="statTotalTime">0 perc</div><div class="tile-lbl">Aktív idő</div></div></div>
+                            <div class="col-6 col-lg-3"><div class="stat-tile text-center rounded-3 p-3"><i class="bi bi-lightning-charge-fill"></i><div class="tile-val" id="statAvgSpeed">0 km/h</div><div class="tile-lbl">Átlag sebesség</div></div></div>
                         </div>
-
                         <h5 class="fw-bold mb-3">Havi teljesítmény (utolsó 6 hónap)</h5>
-                        <div class="chart-wrap mb-4">
-                            <div class="chart-bars" id="chartBars"></div>
-                        </div>
-
+                        <div class="chart-wrap mb-4"><div class="chart-bars" id="chartBars"></div></div>
                         <h5 class="fw-bold mb-3">Csúcsadatok</h5>
                         <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="stat-tile text-center rounded-3 p-3">
-                                    <i class="bi bi-trophy-fill"></i>
-                                    <div class="tile-val" id="statLongest">0 km</div>
-                                    <div class="tile-lbl">Leghosszabb túrád</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="stat-tile text-center rounded-3 p-3">
-                                    <i class="bi bi-fire"></i>
-                                    <div class="tile-val" id="statFastest">0 km/h</div>
-                                    <div class="tile-lbl">Leggyorsabb átlag</div>
-                                </div>
-                            </div>
+                            <div class="col-md-6"><div class="stat-tile text-center rounded-3 p-3"><i class="bi bi-trophy-fill"></i><div class="tile-val" id="statLongest">0 km</div><div class="tile-lbl">Leghosszabb túrád</div></div></div>
+                            <div class="col-md-6"><div class="stat-tile text-center rounded-3 p-3"><i class="bi bi-fire"></i><div class="tile-val" id="statFastest">0 km/h</div><div class="tile-lbl">Leggyorsabb átlag</div></div></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- GYIK -->
                 <div class="tab-pane fade" id="tab-content-faq" role="tabpanel">
                     <div class="profile-panel">
                         <h4 class="profile-panel-title"><i class="bi bi-question-circle nari me-2"></i>Gyakran ismételt kérdések</h4>
                         <div class="accordion faq-accordion" id="faqAccordion">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                        Milyen gyakran kell olajozni a láncot?
-                                    </button>
-                                </h2>
-                                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Általában <strong>250–400 km</strong> tekerés után érdemes újraolajozni a láncot, illetve minden esős túra után.
-                                        Tisztítsd le előbb a régi olajat egy láncmosóval vagy ronggyal, majd cseppents friss kenőanyagot
-                                        szemenként a görgőkre, és töröld le a felesleget.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                        Mekkora legyen a guminyomásom?
-                                    </button>
-                                </h2>
-                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        A gyári ajánlott érték a gumi oldalfalán van feltüntetve (PSI / bar).
-                                        Tájékoztatóul: országúti 25c gumira <strong>6.5–7.5 bar</strong>,
-                                        gravel 38c gumira <strong>3.5–4.5 bar</strong>, MTB 2.4&quot; gumira <strong>1.6–2.2 bar</strong> az ideális
-                                        tartomány. Nehezebb tekerő több, sárosabb terep kevesebb nyomást igényel.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                        Hogyan ismerem fel, ha cserélni kell a féktárcsát?
-                                    </button>
-                                </h2>
-                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        A féktárcsa minimum vastagsága a tárcsára van gravírozva (általában <strong>1.5 mm</strong>).
-                                        Egy tolómérővel mérd meg, és ha ennél vékonyabb, cseréld. A betétet pedig akkor,
-                                        amikor már csak <strong>1 mm</strong> vastag a fékpofa belseje.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                        Mit tegyek a téli tároláshoz?
-                                    </button>
-                                </h2>
-                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Mosd le alaposan a bicajt, olajozd újra a láncot vékonyan, engedj le pár psi-t a gumikból
-                                        (kb. felére), és tárold száraz, hűvös helyen, lehetőleg felfüggesztve, hogy a gumik ne
-                                        nyomódjanak. Akkumulátoros e-biken töltsd <strong>40–60%</strong>-ra és vedd ki, ha tudod.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                                        Mikor érdemes szervizbe vinni?
-                                    </button>
-                                </h2>
-                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Évente egyszer egy <strong>komplett szerviz</strong> ajánlott (csapágyak, váltó, fékek),
-                                        de <strong>2000 km</strong> után mindenképp érdemes nézetni. Ha a váltás recseg vagy
-                                        ugrik, a fék szivacsos érzetű, esetleg fura zajt ad ki a középrész vagy az agy, ne halogasd.
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">Milyen gyakran kell olajozni a láncot?</button></h2><div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Általában <strong>250–400 km</strong> tekerés után érdemes újraolajozni, illetve minden esős túra után. Tisztítsd le előbb a régi olajat, majd cseppents friss kenőanyagot szemenként a görgőkre, és töröld le a felesleget.</div></div></div>
+                            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Mekkora legyen a guminyomásom?</button></h2><div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Az ajánlott érték a gumi oldalfalán van. Tájékoztatóul: országúti 25c: <strong>6.5–7.5 bar</strong>, gravel 38c: <strong>3.5–4.5 bar</strong>, MTB 2.4": <strong>1.6–2.2 bar</strong>.</div></div></div>
+                            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Hogyan ismerem fel, ha cserélni kell a féktárcsát?</button></h2><div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">A minimum vastagság a tárcsára van gravírozva (általában <strong>1.5 mm</strong>). Tolómérővel mérd meg, és ha ennél vékonyabb, cseréld. A betétet pedig amikor már csak <strong>1 mm</strong> vastag a fékpofa.</div></div></div>
+                            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Mit tegyek a téli tároláshoz?</button></h2><div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Mosd le alaposan, olajozd újra a láncot, engedj le pár PSI-t a gumikból, és tárold száraz helyen felfüggesztve. E-biken töltsd <strong>40–60%</strong>-ra az akkumulátort.</div></div></div>
+                            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">Mikor érdemes szervizbe vinni?</button></h2><div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Évente egyszer <strong>komplett szerviz</strong> ajánlott, de <strong>2000 km</strong> után mindenképp érdemes nézetni. Ha a váltás recseg, a fék szivacsos, ne halogasd.</div></div></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- SZERELÉS -->
                 <div class="tab-pane fade" id="tab-content-repair" role="tabpanel">
                     <div class="profile-panel">
                         <h4 class="profile-panel-title"><i class="bi bi-tools nari me-2"></i>Gyors szerelési útmutató</h4>
                         <p class="text-secondary small mb-3">A garázsodban lévő bicikleidhez összegyűjtöttük a leggyakoribb otthon elvégezhető műveleteket.</p>
 
                         <div class="repair-card open">
-                            <button class="repair-head">
-                                <span class="d-flex align-items-center gap-3">
-                                    <span class="repair-icon"><i class="bi bi-link-45deg"></i></span>
-                                    Lánc olajozása és tisztítása
-                                </span>
-                                <i class="bi bi-chevron-down chevron"></i>
-                            </button>
-                            <div class="repair-body">
-                                <p class="mb-2"><strong>Szükséges eszközök:</strong> láncolaj, tisztítórongy, lánctisztító (opcionális).</p>
-                                <ol class="repair-steps">
-                                    <li>Tedd a hátsó kereket állványra vagy fordítsd fejre a bicajt.</li>
-                                    <li>A pedállal forgasd visszafelé a hajtóművet, közben a tisztítóronggyal töröld le a láncot.</li>
-                                    <li>Lánctisztítóval (vagy degreaser-rel) menj át rajta, majd hagyd megszáradni.</li>
-                                    <li>Csepegtess olajat <strong>minden egyes láncszemre</strong> a görgő tetejére.</li>
-                                    <li>Hajtsd át pár fordulatig, majd ronggyal töröld le a felesleget.</li>
-                                </ol>
-                            </div>
+                            <button class="repair-head"><span class="d-flex align-items-center gap-3"><span class="repair-icon"><i class="bi bi-link-45deg"></i></span>Lánc olajozása és tisztítása</span><i class="bi bi-chevron-down chevron"></i></button>
+                            <div class="repair-body"><p class="mb-2"><strong>Szükséges eszközök:</strong> láncolaj, tisztítórongy, lánctisztító (opcionális).</p><ol class="repair-steps"><li>Tedd a hátsó kereket állványra vagy fordítsd fejre a bicajt.</li><li>A pedállal forgasd visszafelé a hajtóművet, közben töröld le a láncot.</li><li>Lánctisztítóval menj át rajta, majd hagyd megszáradni.</li><li>Csepegtess olajat <strong>minden egyes láncszemre</strong> a görgő tetejére.</li><li>Hajtsd át pár fordulatig, majd töröld le a felesleget.</li></ol></div>
                         </div>
 
                         <div class="repair-card">
-                            <button class="repair-head">
-                                <span class="d-flex align-items-center gap-3">
-                                    <span class="repair-icon"><i class="bi bi-circle-fill"></i></span>
-                                    Defekt javítása útközben (gumibelső csere)
-                                </span>
-                                <i class="bi bi-chevron-down chevron"></i>
-                            </button>
-                            <div class="repair-body">
-                                <p class="mb-2"><strong>Szükséges eszközök:</strong> gumibélelő, pót gumibelső vagy folt, pumpa / CO₂.</p>
-                                <ol class="repair-steps">
-                                    <li>Vedd ki a kereket a gyorszárral vagy thru-axle-lel.</li>
-                                    <li>Engedj ki minden levegőt a szelep megnyomásával.</li>
-                                    <li>Két gumibélelővel pattintsd le a köpenyt a felni egyik oldaláról.</li>
-                                    <li>Húzd ki a gumibelsőt, ellenőrizd a köpenyt belülről, hogy nincs-e benne idegen tárgy!</li>
-                                    <li>Helyezd be az új belsőt, kicsit fújd fel, hogy formát kapjon, majd pattintsd vissza a köpenyt.</li>
-                                    <li>Fújd fel az ajánlott nyomásra, és szerelt vissza a kereket.</li>
-                                </ol>
-                            </div>
+                            <button class="repair-head"><span class="d-flex align-items-center gap-3"><span class="repair-icon"><i class="bi bi-circle-fill"></i></span>Defekt javítása útközben</span><i class="bi bi-chevron-down chevron"></i></button>
+                            <div class="repair-body"><p class="mb-2"><strong>Szükséges eszközök:</strong> gumibélelő, pót gumibelső vagy folt, pumpa.</p><ol class="repair-steps"><li>Vedd ki a kereket a gyorszárral vagy thru-axle-lel.</li><li>Engedj ki minden levegőt a szelep megnyomásával.</li><li>Két gumibélelővel pattintsd le a köpenyt a felni egyik oldaláról.</li><li>Húzd ki a gumibelsőt, ellenőrizd a köpenyt belülről!</li><li>Helyezd be az új belsőt, kicsit fújd fel, majd pattintsd vissza a köpenyt.</li><li>Fújd fel az ajánlott nyomásra, és szerd vissza a kereket.</li></ol></div>
                         </div>
 
                         <div class="repair-card">
-                            <button class="repair-head">
-                                <span class="d-flex align-items-center gap-3">
-                                    <span class="repair-icon"><i class="bi bi-gear-fill"></i></span>
-                                    Hátsó váltó alapfinomhangolás
-                                </span>
-                                <i class="bi bi-chevron-down chevron"></i>
-                            </button>
-                            <div class="repair-body">
-                                <p class="mb-2"><strong>Tünetek:</strong> ugrál a lánc, recseg váltás közben, nem kapcsol fel a legnagyobb fogasra.</p>
-                                <ol class="repair-steps">
-                                    <li>Kapcsolj le a legkisebb hátsó fogasra (legnagyobb sebességfokozatra).</li>
-                                    <li>Lazítsd ki a bowden szorítócsavarját és vegyél ki minden húzást.</li>
-                                    <li>Állítsd be a <strong>H (High)</strong> limitcsavart úgy, hogy a vezetőgörgő a legkisebb fogas alá kerüljön.</li>
-                                    <li>Húzd vissza a bowdent kézzel, szorítsd meg újra.</li>
-                                    <li>Apró negyed fordulatokkal állítsd a <strong>bowden feszítő</strong> (barrel adjuster) csavart, amíg a váltás precíz lesz.</li>
-                                    <li>Végül a <strong>L (Low)</strong> limittel állítsd be a legnagyobb fogas pozícióját.</li>
-                                </ol>
-                            </div>
+                            <button class="repair-head"><span class="d-flex align-items-center gap-3"><span class="repair-icon"><i class="bi bi-gear-fill"></i></span>Hátsó váltó alapfinomhangolás</span><i class="bi bi-chevron-down chevron"></i></button>
+                            <div class="repair-body"><p class="mb-2"><strong>Tünetek:</strong> ugrál a lánc, recseg váltás közben, nem kapcsol fel a legnagyobb fogasra.</p><ol class="repair-steps"><li>Kapcsolj le a legkisebb hátsó fogasra.</li><li>Lazítsd ki a bowden szorítócsavarját és vegyél ki minden húzást.</li><li>Állítsd be a <strong>H (High)</strong> limitcsavart: a vezetőgörgő a legkisebb fogas alá kerüljön.</li><li>Húzd vissza a bowdent kézzel, szorítsd meg újra.</li><li>Apró negyed fordulatokkal állítsd a <strong>barrel adjuster</strong> csavart.</li><li>Végül a <strong>L (Low)</strong> limittel állítsd be a legnagyobb fogas pozícióját.</li></ol></div>
                         </div>
 
                         <div class="repair-card">
-                            <button class="repair-head">
-                                <span class="d-flex align-items-center gap-3">
-                                    <span class="repair-icon"><i class="bi bi-droplet-half"></i></span>
-                                    Hidraulikus tárcsafék légtelenítése (alap)
-                                </span>
-                                <i class="bi bi-chevron-down chevron"></i>
-                            </button>
-                            <div class="repair-body">
-                                <p class="mb-2"><strong>Szükséges eszközök:</strong> márkaspecifikus bleed kit, DOT vagy mineral olaj, nitril kesztyű.</p>
-                                <ol class="repair-steps">
-                                    <li>Tisztítsd le a fékkengyelt és a kart, vedd le a betéteket.</li>
-                                    <li>Helyezd be a bleed block-ot a betétek helyére, hogy ne nyomódjanak ki a dugattyúk.</li>
-                                    <li>Csatlakoztasd a bleed fecskendőket a kengyel és a kar bleed portjához.</li>
-                                    <li>Pumpáld át az olajat lentről felfelé, miközben a karral finoman dolgozol, hogy a légbuborékok kijöjjenek.</li>
-                                    <li>Zárd le sorrendben: előbb a kengyel port, majd a karét.</li>
-                                    <li>Tedd vissza a betéteket, próbáld le a féket stabil, kemény fogásra.</li>
-                                </ol>
-                            </div>
+                            <button class="repair-head"><span class="d-flex align-items-center gap-3"><span class="repair-icon"><i class="bi bi-droplet-half"></i></span>Hidraulikus tárcsafék légtelenítése</span><i class="bi bi-chevron-down chevron"></i></button>
+                            <div class="repair-body"><p class="mb-2"><strong>Szükséges eszközök:</strong> bleed kit, DOT vagy mineral olaj, nitril kesztyű.</p><ol class="repair-steps"><li>Tisztítsd le a fékkengyelt és a kart, vedd le a betéteket.</li><li>Helyezd be a bleed block-ot a betétek helyére.</li><li>Csatlakoztasd a bleed fecskendőket a kengyel és a kar portjához.</li><li>Pumpáld át az olajat lentről felfelé, amíg a légbuborékok kijönnek.</li><li>Zárd le: előbb a kengyel port, majd a karét.</li><li>Tedd vissza a betéteket, próbáld le a féket.</li></ol></div>
                         </div>
 
                         <div class="repair-card">
-                            <button class="repair-head">
-                                <span class="d-flex align-items-center gap-3">
-                                    <span class="repair-icon"><i class="bi bi-arrows-angle-expand"></i></span>
-                                    Nyereg magasság beállítása
-                                </span>
-                                <i class="bi bi-chevron-down chevron"></i>
-                            </button>
-                            <div class="repair-body">
-                                <p class="mb-2"><strong>Hüvelykujjszabály:</strong> belső szár (cm) × <strong>0.883</strong> = nyeregfelszín – középrész középpont távolság.</p>
-                                <ol class="repair-steps">
-                                    <li>Mezítláb állj a falhoz és tegyél egy könyvet a lábad közé, fent a könyv pereme adja a belső szárat.</li>
-                                    <li>Szorozd be 0.883-mal a belső szárad cm-ben.</li>
-                                    <li>Mérd meg a nyereg felső felületétől a középrész tengelyéig a kapott távolságot.</li>
-                                    <li>Ülve a nyergen, sarokkal a pedálnak támasztva a lábad legyen majdnem teljesen kiegyenesedve a holtpontban.</li>
-                                    <li>Finomhangolj ±5 mm-t kényelem és teljesítmény szerint.</li>
-                                </ol>
-                            </div>
+                            <button class="repair-head"><span class="d-flex align-items-center gap-3"><span class="repair-icon"><i class="bi bi-arrows-angle-expand"></i></span>Nyereg magasság beállítása</span><i class="bi bi-chevron-down chevron"></i></button>
+                            <div class="repair-body"><p class="mb-2"><strong>Hüvelykujjszabály:</strong> belső szár (cm) × <strong>0.883</strong> = nyeregfelszín – középrész távolság.</p><ol class="repair-steps"><li>Állj a falhoz és tegyél egy könyvet a lábad közé – a könyv pereme adja a belső szárat.</li><li>Szorozd be 0.883-mal a belső szárad cm-ben.</li><li>Mérd meg a nyereg felső felületétől a középrész tengelyéig.</li><li>Ülve a nyergen, garokkal a pedálnak a lábad legyen majdnem teljesen kinyújtva.</li><li>Finomhangolj ±5 mm-t kényelem és teljesítmény szerint.</li></ol></div>
                         </div>
                     </div>
                 </div>
@@ -507,46 +186,15 @@
         <footer class="py-3 mt-4">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3">
-                        <p><img class="w-50" src="assets/img/BraVa.png" alt="BraVa logó"></p>
-                        <p>Kerékpárok, alkatrészek, szerszámok, szakértő segítséggel 2026 óta.</p>
-                    </div>
-                    <div class="col-lg-3 mx-auto">
-                        <p class="fw-bold">Bolt</p>
-                        <ul class="list-unstyled">
-                            <li><a href="webshop.html" title="Webshop" class="text-decoration-none">Webshop</a></li>
-                            <li><a href="kerekpar-valaszto.html" title="Kerékpár választó" class="text-decoration-none">Kerékpár választó</a></li>
-                            <li><a href="webshop.html" title="Akciók" class="text-decoration-none">Akciók</a></li>
-                            <li><a href="webshop.html" title="Újdonságok" class="text-decoration-none">Újdonságok</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 mx-auto">
-                        <p class="fw-bold">Segítség</p>
-                        <ul class="list-unstyled">
-                            <li><a href="index.html" title="GY.I.K" class="text-decoration-none">GY.I.K</a></li>
-                            <li><a href="index.html" title="Szállítás" class="text-decoration-none">Szállítás</a></li>
-                            <li><a href="index.html" title="Visszaküldés" class="text-decoration-none">Visszaküldés</a></li>
-                            <li><a href="index.html" title="Újdonságok" class="text-decoration-none">Szerviz</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 mx-auto">
-                        <p class="fw-bold">Cég</p>
-                        <ul class="list-unstyled">
-                            <li><a href="index.html" title="Rólunk" class="text-decoration-none">Rólunk</a></li>
-                            <li><a href="index.html" title="Kapcsolat" class="text-decoration-none">Kapcsolat</a></li>
-                            <li><a href="index.html" title="ÁSZF" class="text-decoration-none">ÁSZF</a></li>
-                            <li><a href="index.html" title="Adatvédelem" class="text-decoration-none">Adatvédelem</a></li>
-                        </ul>
-                    </div>
+                    <div class="col-lg-3"><p><img class="w-50" src="assets/img/BraVa.webp" alt="BraVa logó"></p><p>Kerékpárok, alkatrészek, szerszámok, szakértő segítséggel 2026 óta.</p></div>
+                    <div class="col-lg-3 mx-auto"><p class="fw-bold">Bolt</p><ul class="list-unstyled"><li><a href="webshop.html" class="text-decoration-none">Webshop</a></li><li><a href="kerekpar-valaszto.html" class="text-decoration-none">Kerékpár választó</a></li><li><a href="webshop.html" class="text-decoration-none">Akciók</a></li><li><a href="webshop.html" class="text-decoration-none">Újdonságok</a></li></ul></div>
+                    <div class="col-lg-3 mx-auto"><p class="fw-bold">Segítség</p><ul class="list-unstyled"><li><a href="index.html" class="text-decoration-none">GY.I.K</a></li><li><a href="index.html" class="text-decoration-none">Szállítás</a></li><li><a href="index.html" class="text-decoration-none">Visszaküldés</a></li><li><a href="index.html" class="text-decoration-none">Szerviz</a></li></ul></div>
+                    <div class="col-lg-3 mx-auto"><p class="fw-bold">Cég</p><ul class="list-unstyled"><li><a href="index.html" class="text-decoration-none">Rólunk</a></li><li><a href="index.html" class="text-decoration-none">Kapcsolat</a></li><li><a href="index.html" class="text-decoration-none">ÁSZF</a></li><li><a href="index.html" class="text-decoration-none">Adatvédelem</a></li></ul></div>
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="col-lg-6">
-                        <p>&copy; 2026 Minden jog fenntartva &bull; <a class="text-decoration-none" href="index.html">Brava Kft.</a></p>
-                    </div>
-                    <div class="col-lg-6">
-                        <p class="text-end">Üzemeltető szervezet: <a class="text-decoration-none" href="index.html">Brava host Kft.</a></p>
-                    </div>
+                    <div class="col-lg-6"><p>&copy; 2026 Minden jog fenntartva &bull; <a class="text-decoration-none" href="index.html">Brava Kft.</a></p></div>
+                    <div class="col-lg-6"><p class="text-end">Üzemeltető szervezet: <a class="text-decoration-none" href="index.html">Brava host Kft.</a></p></div>
                 </div>
             </div>
         </footer>
@@ -555,36 +203,11 @@
     <nav class="mobil-navigacio">
         <div class="mobile-bottom-nav">
             <div class="mobile-nav-container">
-                <div class="mobile-nav-item">
-                    <a href="index.html" class="mobile-nav-link" title="Főoldal">
-                        <i class="bi bi-house"></i>
-                        <span class="mobile-nav-label">Főoldal</span>
-                    </a>
-                </div>
-                <div class="mobile-nav-item">
-                    <a href="webshop.html" class="mobile-nav-link" title="Webshop">
-                        <i class="bi bi-shop-window"></i>
-                        <span class="mobile-nav-label">Webshop</span>
-                    </a>
-                </div>
-                <div class="mobile-nav-item">
-                    <a href="checkout.html" class="mobile-nav-link" title="Kosár">
-                        <i class="bi bi-cart"></i>
-                        <span class="mobile-nav-label">Kosár</span>
-                    </a>
-                </div>
-                <div class="mobile-nav-item">
-                    <a href="shops.html" class="mobile-nav-link" title="Üzleteink">
-                        <i class="bi bi-map"></i>
-                        <span class="mobile-nav-label">Üzleteink</span>
-                    </a>
-                </div>
-                <div class="mobile-nav-item">
-                    <a href="profile.html" class="mobile-nav-link active" title="Fiók">
-                        <i class="bi bi-person-circle"></i>
-                        <span class="mobile-nav-label">Fiók</span>
-                    </a>
-                </div>
+                <div class="mobile-nav-item"><a href="index.html" class="mobile-nav-link"><i class="bi bi-house"></i><span class="mobile-nav-label">Főoldal</span></a></div>
+                <div class="mobile-nav-item"><a href="webshop.html" class="mobile-nav-link"><i class="bi bi-shop-window"></i><span class="mobile-nav-label">Webshop</span></a></div>
+                <div class="mobile-nav-item"><a href="checkout.html" class="mobile-nav-link"><i class="bi bi-cart"></i><span class="mobile-nav-label">Kosár</span></a></div>
+                <div class="mobile-nav-item"><a href="shops.html" class="mobile-nav-link"><i class="bi bi-map"></i><span class="mobile-nav-label">Üzleteink</span></a></div>
+                <div class="mobile-nav-item"><a href="profile.html" class="mobile-nav-link nari"><i class="bi bi-person-circle"></i><span class="mobile-nav-label">Fiók</span></a></div>
             </div>
         </div>
     </nav>
